@@ -1,0 +1,8 @@
+<h3>Update your dog</h3>
+        <%= simple_form_for @dog do |f| %>
+          <%= f.input :name %>
+          <%= f.input :breed %>
+          <%= f.input :description %>
+          <%= f.input :location_cp %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
