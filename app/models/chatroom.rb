@@ -1,4 +1,7 @@
 class Chatroom < ApplicationRecord
-  belongs_to :recipient_id
-  belongs_to :sender_id
+  # belongs_to :user
+  # # belongs_to :sender_id
+  has_many :messages
+  # validates :recipient, presence: true
+
 end
