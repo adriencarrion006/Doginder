@@ -1,0 +1,33 @@
+.tapbar{
+  padding: 2vh;
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  background-color: #3b589c;
+  border: 1px solid black;
+  align-items: flex-end;
+  clear: both;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+// .tapbar-account{
+//   }
+
+// .tapbar-chat{
+// }
+
+.bouton-basic{
+  background-color: #1773ea;
+  border-radius: 7px;
+  padding: 1vh;
+  width: 10vh;
+  text-align: center;
+  box-shadow: 5px, 5px, 1px, red;
+  a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    }
+}
