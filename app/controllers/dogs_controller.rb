@@ -20,13 +20,24 @@ class DogsController < ApplicationController
     end
   end
   def edit
-
+    @dog = Dog.find(params[:id])
   end
   def update
+    @dog = Dog.find(params[:id])
+    if @dog.update(dog_params)
+      redirect_to dogs_path(@dog)
+    else
+      render :edit
+    end
 
   end
 
   def destroy
+    if @dog.destroy
+      redirect_to dogs_path(@dog)
+    else
+      render :index
+    end
 
   end
 
