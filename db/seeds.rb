@@ -9,5 +9,7 @@
 DogInterest.destroy_all
 Dog.destroy_all
 User.destroy_all
-user = User.create(email:"super@gmail.com", password:"lechien")
-dogs = Dog.create(user_id: user.id, name: "rex", breed:"berger allemand", description:"il fouille partout",location_cp:"06130")
+user = User.create!(email:"super@gmail.com", password:"lechien")
+user2 = User.create!(email:"titi@gmail.com", password:"lechien")
+dogs = Dog.create!(user_id: user.id, name: "rex", breed:"berger allemand", description:"il fouille partout",location_cp:"06130")
+Chatrooms = Chatroom.create!(recipient: user.id, sender: user2.id)
