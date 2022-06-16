@@ -1,0 +1,30 @@
+html, body {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(70deg, #9e1091, #fed77b);
+}
+
+.dog-name{
+  font-size: 70px;
+  text-align: center;
+  margin-top: 7vh;
+  color: white;
+  font-weight: bolder;
+  position: sticky;
+}
+
+.infos-dog{
+  background-color: blue;
+  height: 91vh;
+}
+
+.description{
+margin-top: 10vh;
+}
+
+p{
+  display: flex;
+  justify-content: left;
+  padding-left: 3vh;
+
+}

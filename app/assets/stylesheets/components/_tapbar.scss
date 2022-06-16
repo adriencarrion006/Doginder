@@ -1,33 +1,51 @@
-.tapbar{
-  padding: 2vh;
+
+.tap{
   display: flex;
+  padding: 2vh;
   margin-top: auto;
   justify-content: space-between;
-  background-color: #3b589c;
-  border: 1px solid black;
+  background: linear-gradient(70deg, #9e1091, #fed77b);
   align-items: flex-end;
   clear: both;
   position: absolute;
   width: 100%;
   bottom: 0;
+  a{
+      padding-top: 1vh;
+      display: flex;
+      justify-content: space-around;
+      color: white;
+      text-decoration: none;
+      font-weight: bolder;
+      align-items: center;
+      text-align: center;
+      font-size: 16px;
+  }
 }
 
-// .tapbar-account{
-//   }
+.bouton {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  background-color: #3397e1;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #1773ea;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
 
-// .tapbar-chat{
-// }
-
-.bouton-basic{
-  background-color: #1773ea;
-  border-radius: 7px;
-  padding: 1vh;
-  width: 10vh;
+.bouton:hover {
+  background-color: #3397e1;
+  box-shadow: 0px 15px 20px #1773ea;
+  color: white;
+  transform: translateY(-5px);
   text-align: center;
-  box-shadow: 5px, 5px, 1px, red;
-  a{
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-    }
+  font-weight: bolder;
+  text-decoration: none;
 }

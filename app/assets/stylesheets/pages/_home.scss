@@ -1,9 +1,14 @@
 // Specific CSS for your home-page
-h1{
-  margin-top: 3vh;
-  font-weight: bolder;
+html, body {
+  position: relative;
+  min-height: 100vh;
 }
 
-h2{
-  margin-top: 7vh;
+.full-page{
+  display: flex;
+  background: linear-gradient(70deg, #9e1091, #fed77b);
+}
+
+.slogan{
+  text-align: center;
 }
