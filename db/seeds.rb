@@ -8,6 +8,8 @@
 
 DogInterest.destroy_all
 Dog.destroy_all
+Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 user = User.create!(email:"super@gmail.com", password:"lechien")
 user2 = User.create!(email:"titi@gmail.com", password:"lechien")
