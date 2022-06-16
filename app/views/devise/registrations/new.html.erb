@@ -8,6 +8,25 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+
+  <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "first_name" }%>
+  <%= f.input :last_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "last_name" }%>
+
+  <%= f.input :pseudo,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "pseudo" }%>
+  <%= f.input :description,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "description" }%>
+
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
