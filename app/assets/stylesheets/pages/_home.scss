@@ -4,11 +4,15 @@ html, body {
   min-height: 100vh;
 }
 
-.full-page{
-  display: flex;
-  background: linear-gradient(70deg, #9e1091, #fed77b);
-}
-
 .slogan{
   text-align: center;
+}
+
+.core-home{
+  background-color: blue;
+  height: 40vh;
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+
 }

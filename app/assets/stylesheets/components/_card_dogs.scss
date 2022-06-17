@@ -1,13 +1,22 @@
 html, body {
-  position: relative;
-  height: 100%;
+  position: sticky;
+  min-height: 100vh;
   background: linear-gradient(70deg, #9e1091, #fed77b);
+}
+
+.head h1{
+  font-size: 70px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5em;
+  color: white;
+  font-weight: bolder;
 }
 
 .dog-name{
   font-size: 70px;
   text-align: center;
-  margin-top: 7vh;
   color: white;
   font-weight: bolder;
   position: sticky;
@@ -15,16 +24,29 @@ html, body {
 
 .infos-dog{
   background-color: blue;
-  height: 91vh;
+  height: 60vh;
 }
 
-.description{
-margin-top: 10vh;
-}
 
-p{
+.description p{
   display: flex;
   justify-content: left;
   padding-left: 3vh;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  ;
+}
 
+#rex{
+  display: flex;
+  margin-top: 3vh;
+  // width: 200px;
+  // height: 300px;
+  object-fit: cover;
+  border-image: 10px solid white;
+  border-radius: 20px;
+}
+
+.image{
 }

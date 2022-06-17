@@ -4,22 +4,23 @@
   padding: 2vh;
   margin-top: auto;
   justify-content: space-between;
-  background: linear-gradient(70deg, #9e1091, #fed77b);
+  background: blue;
   align-items: flex-end;
   clear: both;
   position: absolute;
   width: 100%;
+  height: 10vh;
   bottom: 0;
   a{
-      padding-top: 1vh;
-      display: flex;
-      justify-content: space-around;
-      color: white;
-      text-decoration: none;
-      font-weight: bolder;
-      align-items: center;
-      text-align: center;
-      font-size: 16px;
+      // padding-top: 1vh;
+      // display: flex;
+      // justify-content: space-around;
+      // color: white;
+      // text-decoration: none;
+      // font-weight: bolder;
+      // align-items: center;
+      // text-align: center;
+      // font-size: 16px;
   }
 }
 
@@ -48,4 +49,16 @@
   text-align: center;
   font-weight: bolder;
   text-decoration: none;
+}
+
+.tap h2{
+  display: flex;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  justify-content: space-around;
+  font-weight: bolder;
+  align-items: center;
+  text-align: center;
+  padding-top: 1vh;
 }

@@ -1,9 +1,13 @@
 
 <div class="tap">
-  <div class="tapbar-account bouton">
-    <%= link_to "account", "#" %>
-  </div>
-  <div class="tapbar-chat bouton">
-    <%= link_to "chat", chatrooms_path %>
-  </div>
+  <%= link_to "# account" do %>
+    <div class="tapbar-account bouton">
+    <h2>Account</h2>
+    </div>
+    <% end %>
+  <%= link_to chatrooms_path do %>
+    <div class="tapbar-chat bouton">
+    <h2>Chat</h2>
+    </div>
+    <% end %>
 </div>
