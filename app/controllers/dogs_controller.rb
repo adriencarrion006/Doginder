@@ -1,5 +1,6 @@
 class DogsController < ApplicationController
   def index
+    @match = Match.all
     @dogs = Dog.all
   end
   def show
