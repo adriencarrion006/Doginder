@@ -4,9 +4,12 @@
 <br>
 
 <% @dogs.each do |dog| %>
+
+<%if dog.match_ids[0] == nil %>
+
 <%= dog.name%>
 
 <%= link_to "LIKE" , matches_path(dog_id: dog.id, match: "true"), method: :post %>
 <%= link_to "DON'T LIKE" , matches_path(dog_id: dog.id, match: "false"), method: :post %>
-
+<% end %>
 <% end %>

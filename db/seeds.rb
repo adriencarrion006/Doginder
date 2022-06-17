@@ -15,4 +15,6 @@ User.destroy_all
 user = User.create!(email:"super@gmail.com", password:"lechien")
 user2 = User.create!(email:"titi@gmail.com", password:"lechien")
 dogs = Dog.create!(user_id: user.id, name: "rex", breed:"berger allemand", description:"il fouille partout",location_cp:"06130")
+dogs1 = Dog.create!(user_id: user.id, name: "lassie", breed:"border colier", description:"super gentille",location_cp:"06400")
+
 Chatrooms = Chatroom.create!(recipient: user.id, sender: user2.id)
