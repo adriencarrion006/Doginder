@@ -1,22 +1,28 @@
 <div class="card-general">
+  <div class="header">
+    <h1>Doginder.</h1>
+  </div>
   <div class="infos-dog">
     <div class="dog-name">
       <h1><%= @dog.name %></h1>
     </div>
-
     <%# <% <div>
       <% <%= link_to photo_path(photo) do %>
       <%# <% <%= end %>
     <%# <% </div> %>
 
     <div class="description">
-      <p><%= @dog.breed %></p>
-      <p><%= @dog.description %></p>
-      <p><%= @dog.location_cp %></p>
-            <h2><%= link_to "retour", dogs_path%></h2>
 
+      <div class="image">
+        <%# <%= image_tag('rex.jpg', id:"rex")  %>
+      </div>
+        <p><%= @dog.breed %></p>
+        <p><%= @dog.location_cp %></p>
+        <p><%= @dog.description %></p>
+      </div>
 <%= link_to "methde create", dog_chatrooms_path(@dog.id),    method: :post%>
     </div>
+
   </div>
 
 </div>
