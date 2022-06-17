@@ -13,7 +13,10 @@
       <p><%= @dog.breed %></p>
       <p><%= @dog.description %></p>
       <p><%= @dog.location_cp %></p>
+            <h2><%= link_to "retour", dogs_path%></h2>
+
 <%= link_to "methde create", dog_chatrooms_path(@dog.id),    method: :post%>
     </div>
   </div>
+
 </div>

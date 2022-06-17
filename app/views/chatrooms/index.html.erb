@@ -2,8 +2,10 @@
 <br>
 <br>
 <% @chatrooms.each do |chatroom| %>
-
-<%= link_to  chatroom.recipient, chatroom_path(chatroom.id) %>
-
-
+  <% if chatroom.sender === current_user.id %>
+    <% receveur = User.find(chatroom.recipient) %>
+  <% else %>
+    <% receveur = User.find(chatroom.sender) %>
+  <% end %>
+  <%= link_to receveur.email, chatroom_path(chatroom.id) %>
 <% end %>
