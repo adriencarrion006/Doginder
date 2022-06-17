@@ -39,7 +39,9 @@ h1{
 }
 
 h2{
+  display: flex;
+  position: relative;
   font-size: 32px;
-  text-align: center;
+  text-align: left;
   margin-top: 7vh;
 }
