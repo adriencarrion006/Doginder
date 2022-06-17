@@ -12,6 +12,7 @@
     <%# <% </div> %>
 
     <div class="description">
+
       <div class="image">
         <%# <%= image_tag('rex.jpg', id:"rex")  %>
       </div>
@@ -19,5 +20,9 @@
         <p><%= @dog.location_cp %></p>
         <p><%= @dog.description %></p>
       </div>
+<%= link_to "methde create", dog_chatrooms_path(@dog.id),    method: :post%>
+    </div>
+
   </div>
+
 </div>
