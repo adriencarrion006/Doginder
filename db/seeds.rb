@@ -13,8 +13,8 @@ Dog.destroy_all
 Message.destroy_all
 Chatroom.destroy_all
 User.destroy_all
-user = User.create!(email:"super@gmail.com", password:"lechien")
-user2 = User.create!(email:"titi@gmail.com", password:"lechien")
+user = User.create!(email:"super@gmail.com", password:"lechien", pseudo: "user1", first_name: "Brad", last_name: "PITT", image_avatar: "brad pitt.jpg", description: "Il est intelligent")
+user = User.create!(email:"titi@gmail.com", password:"lechien",pseudo: "user2", first_name: "Jessica", last_name: "ALBA", image_avatar: "jessica.jpg", description: "Elle est gentille")
 dogs = Dog.create!(user_id: user.id, name: "rex", breed:"berger allemand", description:"il fouille partout",location_cp:"06130")
 photo1 = URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735608/rex3_ghqkuw.jpg")
 dogs.photos.attach(io: photo1, filename: "rex3.jpg", content_type: "image/jpg")
@@ -41,4 +41,4 @@ dogs4.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs4.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/loup2_zdwzfe.webp"), filename: "loup2.jpg", content_type: "image/jpg")
 dogs4.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/loup3_rradl7.jpg"), filename: "loup3.jpg", content_type: "image/jpg")
 
-Chatrooms = Chatroom.create!(recipient: user.id, sender: user2.id)
+#Chatrooms = Chatroom.create!(recipient: user.id, sender: user2.id)
