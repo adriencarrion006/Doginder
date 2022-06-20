@@ -2,8 +2,9 @@
 <br>
 <br>
 <br>
-
 <% @dogs.each do |dog| %>
+<div class="container">
+ <div class="card-product d-flex justify-content-around my-1" >
 
 <%if dog.match_ids[0] == nil %>
 
@@ -12,4 +13,6 @@
 <%= link_to "LIKE" , matches_path(dog_id: dog.id, match: "true"), method: :post %>
 <%= link_to "DON'T LIKE" , matches_path(dog_id: dog.id, match: "false"), method: :post %>
 <% end %>
+</div>
+</div>
 <% end %>
