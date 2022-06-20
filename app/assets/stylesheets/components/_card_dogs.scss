@@ -1,6 +1,6 @@
-html, body {
-  position: sticky;
-  min-height: 100vh;
+html, body{
+  position: absolute;
+  min-height: 92vh;
   background: linear-gradient(70deg, #9e1091, #fed77b);
 }
 
@@ -24,8 +24,8 @@ html, body {
 }
 
 .infos-dog{
-  background-color: blue;
-  height: 60vh;
+  background-color: transparent;
+  height: 72vh;
 }
 
 
@@ -39,15 +39,97 @@ html, body {
   ;
 }
 
-#rex{
+.d-block{
   display: flex;
   margin-top: 3vh;
-  // width: 200px;
-  // height: 300px;
+  width: 412px;
+  height: 300px;
   object-fit: cover;
   border-image: 10px solid white;
   border-radius: 20px;
 }
 
-.image{
+.chattez a{
+  width: 140px;
+  height: 100%;
+  background-color: #3397e1;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #1773ea;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  padding: 2vh;
+  margin-top: auto;
+  color: white;
+}
+
+.retour a{
+  width: 140px;
+  height: 45px;
+  background-color: #3397e1;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #1773ea;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  padding: 3.5vh;
+  margin-top: auto;
+  color: white;
+}
+
+.chattez a:hover{
+  background-color: #3397e1;
+  box-shadow: 0px 15px 20px #1773ea;
+  color: white;
+  transform: translateY(-5px);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.retour a:hover{
+  background-color: #3397e1;
+  box-shadow: 0px 15px 20px #1773ea;
+  color: white;
+  transform: translateY(-5px);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.infos-boutons{
+  margin-top: 4vh;
+  padding: 2vh;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  clear: both;
+  position: absolute;
+  width: 100%;
+    a{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: bolder;
+    }
+}
+
+p{
+  margin-top: 1vh;
+display: flex;
+align-items: center;
+height: 25px;
+}
+
+i {
+  margin: 2vh;
 }
