@@ -1,32 +1,30 @@
-<div class="container chatroom">
-
-<br>
-<br>
-<br>
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
 
 
+  <div class="sendmessage">
+    <%= simple_form_for [@chatroom, @message],
+      remote: true,
+      html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f|
+    %>
+      <%= f.input :content,
+        label: false,
+        placeholder: "Message ",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+      <%= f.submit "Send", class: "btn btn-primary " %>
+
+    <% end %>
+  </div>
   <div class="messages" data-chatroom-subscription-target="messages">
 
+    <% @chatroom.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
 
-<%= simple_form_for [@chatroom, @message],
-  remote: true,
-  html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f|
-%>
-  <%= f.input :content,
-    label: false,
-    placeholder: "Message ",
-    wrapper_html: {class: "flex-grow-1"}
-  %>
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <%= f.submit "Send", class: "btn btn-primary" %>
-<% end %>
-  <div class="messages" data-chatroom-subscription-target="messages">
-  <% @chatroom.messages.each do |message| %>
-    <%= render "messages/message", message: message %>
-  <% end %>
-</div>
-</div>
+  </div>
