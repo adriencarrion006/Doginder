@@ -10,6 +10,9 @@
       <% <%= link_to photo_path(photo) do %>
       <%# <% <%= end %>
     <%# <% </div> %>
+    <% @dog.photos.each do |photo|%>
+    <%= cl_image_tag photo.key %>
+    <% end %>
 
     <div class="description">
 
