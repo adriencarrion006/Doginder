@@ -23,8 +23,7 @@
 #page-container{
   position: relative;
   min-height: 100vh;
-  // width: 90wh;
-  // overflow: scroll;
+
 }
 
 .header{
@@ -34,7 +33,7 @@
   text-align: center;
   background: transparent;
   }
-  // linear-gradient(70deg, #9e1091, #fed77b)
+
 h1{
   font-size: 70px;
   text-align: center;
@@ -46,4 +45,8 @@ h1{
   margin-bottom: 3vh;
   font-weight: bolder;
   
+}
+
+a{
+  text-decoration: none;
 }

@@ -15,7 +15,7 @@
 
 }
 
-.bouton {
+.bouton{
   width: 140px;
   height: 45px;
   font-family: 'Roboto', sans-serif;
@@ -30,6 +30,10 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  a{
+
+    text-decoration: none;
+  }
 }
 
 .bouton:hover {

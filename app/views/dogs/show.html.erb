@@ -1,33 +1,45 @@
 <div class="card-general">
-  <div class="header">
+  <div class="head">
     <h1>Doginder.</h1>
   </div>
   <div class="infos-dog">
     <div class="dog-name">
       <h1><%= @dog.name %></h1>
     </div>
-
-    <%# <% <div>
-      <% <%= link_to photo_path(photo) do %>
-      <%# <% <%= end %>
-    <%# <% </div> %>
-    <% @dog.photos.each do |photo|%>
-    <%= cl_image_tag photo.key %>
-    <% end %>
-
-
     <div class="description">
-      <div class="image">
-        <%= image_tag('rex.jpg', id:"rex")  %>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000000000000000">
+            <%= image_tag "rex.jpg", class:"d-block w-100", alt:"..." %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag "rex2.jpg", class:"d-block w-100", alt:"..." %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag "rex3.jpg", class:"d-block w-100", alt:"..." %>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-        <p><%= @dog.breed %></p>
-        <p><%= @dog.location_cp %></p>
-        <p><%= @dog.description %></p>
-      </div>
-        <%= link_to "methde create", dog_chatrooms_path(@dog.id),    method: :post%>
-          <%# pourquoi une method create "dog" je suppose, qui revoie sur chatrooms? %>
+        <p><i class="fas fa-paw"></i><%= @dog.breed %></p>
+        <p><i class="fas fa-map-marker-alt"></i><%= @dog.location_cp %></p>
+        <p><i class="fas fa-bone"></i><%= @dog.description %></p>
     </div>
-<h2><%= link_to "retour", dogs_path%></h2>
+      <div class="infos-boutons">
+        <div class="chattez">
+          <%= link_to "Chattez!", dog_chatrooms_path(@dog.id), method: :post%>
+        </div>
+        <div class="retour">
+          <%= link_to "retour", dogs_path%>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>
