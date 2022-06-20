@@ -10,18 +10,18 @@ class ChatroomsController < ApplicationController
   end
   def create
     recipient_id = Dog.find_by(id: params[:dog_id]).user.id
-    if Chatroom.where(sender: current_user.id).where(recipient: recipient_id)
+    if Chatroom.where(sender: current_user.id).where(recipient: recipient_id).present?
       @chatroom = Chatroom.where(sender: current_user.id).where(recipient: recipient_id).first
-      redirect_to chatroom_path(@chatroom)
-    elsif Chatroom.where(recipient: current_user.id).where(sender: recipient_id)
+      # redirect_to chatroom_path(@chatroom)
+    elsif Chatroom.where(recipient: current_user.id).where(sender: recipient_id).present?
       @chatroom = Chatroom.where(recipient: current_user.id).where(sender: recipient_id).first
-      redirect_to chatroom_path(@chatroom)
+      # redirect_to chatroom_path(@chatroom)
     else
       @chatroom = Chatroom.new
       @chatroom.recipient = recipient_id
       @chatroom.sender = current_user.id
       if @chatroom.save
-        redirect_to chatroom_path(@chatroom)
+        # redirect_to chatroom_path(@chatroom)
       else
         render :new
       end
