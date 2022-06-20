@@ -5,3 +5,25 @@
 @import "navbar";
 @import "tapbar";
 @import "card_dogs";
+
+.container {
+  // display: flex;
+  // border: 1px solid black;
+  // border-radius: 15px;
+  // background-color: rgb(238, 245, 245);
+  // padding: 20px;
+  align-content: center;
+}
+.card-product{
+  justify-content: space-around;
+  width: 500px;
+  height: 500PX;
+  align-content: center;
+  display:flex;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: azure;
+  padding: 20px;
+}
