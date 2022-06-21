@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_20_141659) do
+ActiveRecord::Schema.define(version: 2022_06_21_091805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2022_06_20_141659) do
     t.text "picture1"
     t.text "picture2"
     t.text "picture3"
+    t.boolean "like"
     t.index ["user_id"], name: "index_dogs_on_user_id"
   end
 

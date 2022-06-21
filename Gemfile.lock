@@ -70,6 +70,8 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    angular_rails_csrf (5.0.0)
+      railties (>= 3, < 8)
     autoprefixer-rails (10.2.5.0)
       execjs (< 2.8.0)
     aws_cf_signer (0.1.3)
@@ -268,6 +270,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  angular_rails_csrf
   autoprefixer-rails (= 10.2.5)
   bootsnap (>= 1.4.4)
   byebug
