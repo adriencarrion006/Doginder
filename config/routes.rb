@@ -2,12 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :dogs do
-    resources :chatrooms, only: [:create]
-  end
+  resources :dogs
+
+  
   resources :matches, only: [:create]
 
-  resources :chatrooms, only: [:show, :index, :new] do
+  resources :chatrooms, only: [:show, :index, :create] do
     resources :messages, only: :create
 
   end

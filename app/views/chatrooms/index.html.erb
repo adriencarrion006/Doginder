@@ -9,3 +9,9 @@
   <% end %>
   <%= link_to receveur.email, chatroom_path(chatroom.id) %>
 <% end %>
+<ul>
+<% @dogs.each do |dog| %>
+<li><%=link_to "chattez avec  #{dog.name}", chatrooms_path(dog_id: dog.id), method: :post%></li>
+
+<% end %>
+</ul>
