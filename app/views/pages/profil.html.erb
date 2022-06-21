@@ -1,26 +1,46 @@
+<div class = "card-general">
+  <div class="head">
+    <h1>Doginder.</h1>
+  </div>
+  <div class="infos-dog">
+    <% if @user.id == current_user.id %>
 
-<h1> profil </h1>
-  <div class = profil-card>
-  <% if @user.id == current_user.id %>
-    <%= image_tag @user.image_avatar, size:"150x150" %>
-    <div class = "profil-content">
-      <p><%= @user.description  %></p>
-      <p><%= @user.email %></p>
-      <p><%= @user.pseudo %></p>
-      <p><%= @user.first_name %></p>
-      <p><%= @user.last_name %></p>
-        <%= link_to "create a new dog", new_dog_path%>
-      <p> My animals: </p>
-        <% @user.dogs.each do |dog| %>
-        <%= dog.name %>
-        <% end %>
-    </div>
-      <% else %>
-      <div class = "profil-content">
+
+      <div class="dog-name">
+        <h2><%= @user.first_name %></h2>
+      </div>
+      <div class="description">
         <%= image_tag @user.image_avatar, size:"150x150" %>
-        <p><%= @user.pseudo %></p>
-        <p><%= @user.description  %></p>
-        <% end %>
+        <div>
+          <%= link_to "create a new dog", new_dog_path%>
+          <p> My animals: </p>
+            <% @user.dogs.each do |dog| %>
+              <%= dog.name %>
+            <% end %>
+        </div>
+        <p>Pseudo :<%= @user.pseudo %></p>
+        <p>Prénom :<%= @user.first_name %></p>
+        <p>Nom :<%= @user.last_name %></p>
+        <p>Courriel :<%= @user.email %></p>
+        <p>Description :<%= @user.description  %></p>
+      </div>
+        <div class="infos-boutons">
+          <div class="retour">
+            <a href="/dogs">retour</a>
+          </div>
+        </div>
     </div>
-    <%# <%= link_to "dog", dog_path(@dog)%> %>
-</div>
+     <% else %>
+        <div class="dog-name">
+          <h2><%= @user.first_name %></h2>
+        </div>
+        <div class = "profil-content">
+          <%= image_tag @user.image_avatar, size:"150x150" %>
+          <p><%= @user.pseudo %></p>
+          <p><%= @user.description  %></p>
+        </div>
+      <% end %>
+
+
+
+<%# <div class = profil-card></div> %>
