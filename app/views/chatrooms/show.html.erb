@@ -1,14 +1,11 @@
 <div class="container chatroom"
   data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
->
-
-
-  <div class="sendmessage">
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+ <%# <%= cl_image_tag dog.photos.first.key, class: "rounded-circle"%> 
+<div class="sendmessage">
     <%= simple_form_for [@chatroom, @message],
       remote: true,
-      html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f|
-    %>
+      html: {data: {action: "ajax:success->chatroom-subscription#resetForm"}, class: "d-flex" } do |f|%>
       <%= f.input :content,
         label: false,
         placeholder: "Message ",
@@ -19,12 +16,10 @@
       <%= f.submit "Send", class: "btn btn-primary " %>
 
     <% end %>
-  </div>
+</div>
   <div class="messages" data-chatroom-subscription-target="messages">
-
     <% @chatroom.messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>
   </div>
-
-  </div>
+</div>

@@ -12,16 +12,15 @@
     <div class="description">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000000000000000">
-            <%= image_tag "rex.jpg", class:"d-block w-100", alt:"..." %>
+          <div class="carousel-item active" data-bs-interval="1">
+          <%= cl_image_tag @dog.photos.first.key, height: 300, width: 400, crop: :fill %>
           </div>
-          <div class="carousel-item">
-            <%= image_tag "rex2.jpg", class:"d-block w-100", alt:"..." %>
-          </div>
-          <div class="carousel-item">
-            <%= image_tag "rex3.jpg", class:"d-block w-100", alt:"..." %>
-          </div>
+         <% @dog.photos.each do |photo| %>
+         <div class="carousel-item">
+         <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
         </div>
+         <% end %>
+         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
