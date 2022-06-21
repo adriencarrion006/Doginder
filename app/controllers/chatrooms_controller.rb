@@ -1,5 +1,6 @@
 class ChatroomsController < ApplicationController
   def index
+    @dogs = Dog.where(like: true)
     chat_senders = Chatroom.where(sender: current_user.id)
     chat_recipients = Chatroom.where(recipient: current_user.id)
     @chatrooms = chat_senders + chat_recipients
