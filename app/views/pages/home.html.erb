@@ -2,21 +2,20 @@
   <div class="header">
     <h1>Doginder.</h1>
   </div>
-    <div class="slogan">
-      <h2>Pour jouer à la baballe à plusieurs!</h2>
-    </div>
-    <div class="core-search">
+  <div class="slogan">
+    <h2>Pour jouer à la baballe à plusieurs!</h2>
+  </div>
+  <div class="core-search">
     <%= form_tag dogs_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Entrez votre code postal"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-    </div>
-    <div class="core_dog">
-      <%= link_to "dog", dogs_path, class: "btn btn-primary"%>
-    </div>
-
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Entrez votre code postal"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div class="core_dog">
+    <%= link_to "dog", dogs_path, class: "btn btn-primary"%>
+  </div>
 </div>
