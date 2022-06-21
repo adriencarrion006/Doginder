@@ -10,7 +10,7 @@
         <h2><%= @user.first_name %></h2>
       </div>
       <div class="description">
-        <%= image_tag @user.image_avatar, size:"150x150" %>
+        <%= image_tag @user.image_avatar, width:"100%", height:"300", crop:"fill" %>
         <div>
           <%= link_to "create a new dog", new_dog_path%>
           <p> My animals: </p>
