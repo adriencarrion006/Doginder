@@ -33,7 +33,10 @@
         </button>
       </div>
     <div>
+<% if user_signed_in? %>
+
     <%= link_to "maitre", profil_path(@dog.user)  %>
+    <% end %>
     </div>
         <p><i class="fas fa-paw"></i><%= @dog.breed %></p>
         <p><i class="fas fa-map-marker-alt"></i><%= @dog.location_cp %></p>
