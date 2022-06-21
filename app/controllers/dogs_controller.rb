@@ -24,6 +24,8 @@ class DogsController < ApplicationController
   end
   def edit
     @dog = Dog.find(params[:id])
+    params[:like] === "true" ? like = true : like = false
+    @dog.update(like: like)
   end
   def update
     @dog = Dog.find(params[:id])
@@ -46,6 +48,6 @@ class DogsController < ApplicationController
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :photo, :location_cp, :user_id)
+    params.require(:dog).permit(:name, :breed, :description, :photos, :location_cp, :user_id, :like)
   end
 end
