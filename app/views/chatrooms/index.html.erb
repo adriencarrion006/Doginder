@@ -2,7 +2,7 @@
 <br>
 <br>
 <% @chatrooms.each do |chatroom| %>
-  <% if chatroom.sender === current_user.id %>
+  <% if chatroom.sender == current_user.id %>
     <% receveur = User.find(chatroom.recipient) %>
   <% else %>
     <% receveur = User.find(chatroom.sender) %>
