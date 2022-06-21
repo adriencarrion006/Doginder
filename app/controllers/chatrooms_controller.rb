@@ -8,6 +8,10 @@ class ChatroomsController < ApplicationController
   def show
     @message = Message.new(@message)
     @chatroom = Chatroom.find(params[:id])
+    @recipient = User.find(@chatroom.recipient)
+    @sender = User.find(@chatroom.sender)
+
+    # @dog =
   end
   def create
     recipient_id = Dog.find_by(id: params[:dog_id]).user.id
