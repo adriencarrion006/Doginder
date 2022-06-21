@@ -1,7 +1,11 @@
 class DogsController < ApplicationController
   def index
     @match = Match.all
-    @dogs = Dog.all
+    if params[:query].present?
+      @dogs = Dog.where(location_cp: params[:query])
+    else
+      @dogs = Dog.all
+    end
   end
   def show
     @dog = Dog.find(params[:id])
@@ -20,6 +24,8 @@ class DogsController < ApplicationController
   end
   def edit
     @dog = Dog.find(params[:id])
+    params[:like] === "true" ? like = true : like = false
+    @dog.update(like: like)
   end
   def update
     @dog = Dog.find(params[:id])
@@ -39,10 +45,9 @@ class DogsController < ApplicationController
     end
 
   end
-
   private
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :description, :photo, :location_cp, :user_id)
+    params.require(:dog).permit(:name, :breed, :description, :photos, :location_cp, :user_id, :like)
   end
 end
