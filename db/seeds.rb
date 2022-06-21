@@ -20,7 +20,7 @@ user4 = User.create!(email:"seb@gmail.com", password:"lechien", pseudo: "user1",
 user5 = User.create!(email:"david@gmail.com", password:"lechien", pseudo: "user1", first_name: "David", last_name: "CLOIRET", image_avatar: "brad pitt.jpg", description: "Je suis drôle et j'aime les échecs")
 
 
-dogs = Dog.create!(user_id: user5.id, name: "rex", breed:"berger allemand", description:"il fouille partout",location_cp:"06130")
+dogs = Dog.create!(user_id: user5.id, name: "rex", breed:"berger allemand", description:"il fouille partout",location_cp:"06400")
 photo1 = URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735608/rex3_ghqkuw.jpg")
 dogs.photos.attach(io: photo1, filename: "rex3.jpg", content_type: "image/jpg")
 dogs.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735601/rex2_ary3pg.jpg"), filename: "rex2.jpg", content_type: "image/jpg")
@@ -31,7 +31,7 @@ dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/lassie2_mgtcws.jpg"), filename: "lassi2.jpg", content_type: "image/jpg")
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/lassie3_ebumgj.jpg"), filename: "lassie3.jpg", content_type: "image/jpg")
 
-dogs2 = Dog.create!(user_id: user5.id, name: "Beethoven", breed:"Saint-Bernard", description:"il mange trop de croquettes",location_cp:"06200")
+dogs2 = Dog.create!(user_id: user5.id, name: "Beethoven", breed:"Saint-Bernard", description:"il mange trop de croquettes",location_cp:"06400")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/beethoven_a5kcdk.jpg"), filename: "beethoven.jpg", content_type: "image/jpg")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736987/beethoven2_ytavk9.jpg"), filename: "beethoven2.jpg", content_type: "image/jpg")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/beethoven3_nqp7pr.jpg"), filename: "beethoven3.jpg", content_type: "image/jpg")
@@ -41,19 +41,19 @@ dogs3.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs3.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/malinoi2_yplel0.jpg"), filename: "malinoi2.jpg", content_type: "image/jpg")
 dogs3.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/malinoi3_c6wknj.jpg"), filename: "malinoi3.jpg", content_type: "image/jpg")
 
-dogs4 = Dog.create!(user_id: user1.id, name: "Croc-Blanc", breed:"loup", description:"il aime jouer dans la neige",location_cp:"06300")
+dogs4 = Dog.create!(user_id: user1.id, name: "Croc-Blanc", breed:"loup", description:"il aime jouer dans la neige",location_cp:"06400")
 dogs4.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/loup_ggydjv.jpg"), filename: "loup.jpg", content_type: "image/jpg")
 dogs4.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/loup2_zdwzfe.webp"), filename: "loup2.jpg", content_type: "image/jpg")
 dogs4.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/loup3_rradl7.jpg"), filename: "loup3.jpg", content_type: "image/jpg")
 
-dogs5 = Dog.create!(user_id: user2.id, name: "Bella-Chao", breed:"loupHusky siberien", description:"Elle porte bien son nom, Bella est très belle mais aussi très gentille et joueuse.",location_cp:"06300")
+dogs5 = Dog.create!(user_id: user2.id, name: "Bella-Chao", breed:"loupHusky siberien", description:"Elle porte bien son nom, Bella est très belle mais aussi très gentille et joueuse.",location_cp:"06400")
 dogs5.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655816890/bella-chao1_wiswlg.jpg"), filename: "bella-chao1.jpg", content_type: "image/jpg")
 dogs5.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655816890/bella-chao2_ihibgs.jpg"),  filename: "bella-chao2.jpg", content_type: "image/jpg")
 dogs5.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655816890/bella-chao3_hqdec6.jpg"), filename: "bella-chao3.jpg", content_type: "image/jpg")
 
 dogs6 = Dog.create!(user_id: user2.id, name: "Caramel", breed:"Bouledogue Américain", description:"Caramel est un grand garçon, tout en force !
 c'est un chien qui devra sortir avec d’autres animaux.
-",location_cp:"06300")
+",location_cp:"06400")
 dogs6.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817236/caramel-3_fbupqj.jpg"), filename: "caramel-1.jpg", content_type: "image/jpg")
 dogs6.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817236/caramel-1_e5xe5i.jpg"), filename: "caramel-2.jpg", content_type: "image/jpg")
 dogs6.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817236/caramel-2_ziowfe.jpg"), filename: "caramel-3.jpg", content_type: "image/jpg")
@@ -61,12 +61,12 @@ dogs6.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs7 = Dog.create!(user_id: user2.id, name: "Cricket", breed:"Croisé / Autre", description:"Cricket est un chien qui peut se montrer un peu timide au départ et assez câlin une fois qu'il connait.
 C'est un loulou très intelligent qui apprend vite.
 Il est très dynamique et aura besoin d'une grosse dépense physique et mental.
-",location_cp:"06300")
+",location_cp:"06400")
 dogs7.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817399/cricket-2_qzl7ps.jpg"), filename: "Cricket1.jpg", content_type: "image/jpg")
 dogs7.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817399/Cricket1_znh2kt.jpg"), filename: "Cricket-2.jpg", content_type: "image/jpg")
 dogs7.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817399/cricket-3_xhsdbn.jpg"), filename: "Cricket-3.jpg", content_type: "image/jpg")
 
-dogs8 = Dog.create!(user_id: user2.id, name: "Ewelina", breed:"Berger", description:"Ewelina est une chienne sensible",location_cp:"06300")
+dogs8 = Dog.create!(user_id: user2.id, name: "Ewelina", breed:"Berger", description:"Ewelina est une chienne sensible",location_cp:"06400")
 dogs8.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817493/ewelina-3_vowa8n.jpg"), filename: "ewelina-1.jpg", content_type: "image/jpg")
 dogs8.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817493/ewelina-1_r7xh5b.jpg"), filename: "ewelina-2.jpg", content_type: "image/jpg")
 dogs8.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817493/ewelina-2_dh2dhd.jpg"), filename: "ewelina-3.jpg", content_type: "image/jpg")
@@ -78,7 +78,7 @@ dogs9.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 
 dogs10 = Dog.create!(user_id: user3.id, name: "Hijo", breed:"croisé ", description:"Hijo a énormément de mal à faire confiance aux humains. Craintif, méfiant, il aura besoin de temps et d'une approche très douce pour se révéler sous son vrai jour.
 Un petit bonhomme extrêmement attachant, un petit cœur brisé qui attend d'être compris
-",location_cp:"06300")
+",location_cp:"06400")
 dogs10.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817707/hijo1_osfmed.jpg"), filename: "hijo1.jpg", content_type: "image/jpg")
 dogs10.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817708/hijo3_wgyunj.jpg"), filename: "hijo2.jpg", content_type: "image/jpg")
 dogs10.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817707/Hijo2_n8ocsz.jpg"), filename: "hijo3.jpg", content_type: "image/jpg")
@@ -86,7 +86,7 @@ dogs10.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/up
 dogs11 = Dog.create!(user_id: user3.id, name: "Jany", breed:"American staffordshire", description:"Jany est un jeune chienne, dynamique et affectueuse.
 On évitera la présence d’enfants et de chats. Il ne lui faudra pas trop de solitude.
 Odéon est un Amstaff LOF, ce qui implique : port de la muselière, permis de détention, etc.
-",location_cp:"06300")
+",location_cp:"06400")
 dogs11.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817814/jany1_b06mpj.jpg"), filename: "jany1.jpg", content_type: "image/jpg")
 dogs11.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817813/Jany2_levtmh.jpg"), filename: "jany2.jpg", content_type: "image/jpg")
 dogs11.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817813/Jany3_tsdxbl.jpg"), filename: "jany3.jpg", content_type: "image/jpg")
@@ -99,29 +99,29 @@ dogs12.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/up
 
 dogs13 = Dog.create!(user_id: user3.id, name: "Magnum", breed:"Drahthaar", description:"Magnum s'entend avec ses congénères mais il a ses têtes. Il ne s'entend pas avec les chats.
 Si Magnum est un gentil loulou quand il se sent à l'aise il peut vite prendre peur en extérieur.
-",location_cp:"06300")
+",location_cp:"06400")
 dogs13 .photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818004/magnum1_sj91qe.jpg"), filename: "magnum1.jpg", content_type: "image/jpg")
 dogs13 .photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818005/magnum2_mvr8xw.jpg"), filename: "magnum2.jpg", content_type: "image/jpg")
 dogs13 .photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818004/magnum3_c774eb.jpg"), filename: "magnum3.jpg", content_type: "image/jpg")
 
 dogs14 = Dog.create!(user_id: user3.id, name: "Nicky", breed:"Croisé / Dogue argentin", description:"Nicky est un chien affectueux, qui aime son confort et qui a toujours envie d'apprendre et de faire plaisir.
 Sociable avec certaines chiennes
-",location_cp:"06300")
+",location_cp:"06400")
 dogs14.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818144/niky-1_nyhi5b.jpg"), filename: "niky-1.jpg", content_type: "image/jpg")
 dogs14.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818144/niky2_kkdcnq.jpg"), filename: "niky2.jpg", content_type: "image/jpg")
 dogs14.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818146/niky3_a0x6s0.jpg"), filename: "niky3.jpg", content_type: "image/jpg")
 
-dogs15 = Dog.create!(user_id: user4.id, name: "Odda", breed:"Braque", description:"Odda est un chien très dynamique à qui il faudra apprendre à se canaliser en méthode positive. Il aura besoin d'être énormément dépensé, autant physiquement qu'intellectuellement, au risque de rencontrer des problèmes de comportement.",location_cp:"06300")
+dogs15 = Dog.create!(user_id: user4.id, name: "Odda", breed:"Braque", description:"Odda est un chien très dynamique à qui il faudra apprendre à se canaliser en méthode positive. Il aura besoin d'être énormément dépensé, autant physiquement qu'intellectuellement, au risque de rencontrer des problèmes de comportement.",location_cp:"06400")
 dogs15.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818261/odda-1_wxyaps.jpg"), filename: "odda-1.jpg", content_type: "image/jpg")
 dogs15.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818260/odda-2_uwsvku.jpg"), filename: "odda-2.jpg", content_type: "image/jpg")
 dogs15.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818261/odda-3_x6xfuo.jpg"), filename: "odda-3.jpg", content_type: "image/jpg")
 
-dogs16 = Dog.create!(user_id: user4.id, name: "Romeo", breed:"Croisé / Fox terrier poil dur", description:"Roméo est un gentil petit loulou très joueur et affectueux !",location_cp:"06300")
+dogs16 = Dog.create!(user_id: user4.id, name: "Romeo", breed:"Croisé / Fox terrier poil dur", description:"Roméo est un gentil petit loulou très joueur et affectueux !",location_cp:"06400")
 dogs16.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818349/romeo-1_ot6pyn.jpg"), filename: "romeo-1.jpg", content_type: "image/jpg")
 dogs16.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818350/romeo-2_dwc1hw.jpg"), filename: "romeo-2.jpg", content_type: "image/jpg")
 dogs16.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818350/romeo-3_wxjee4.jpg"), filename: "romeo-3.jpg", content_type: "image/jpg")
 
-dogs17 = Dog.create!(user_id: user4.id, name: "Titounet", breed:"Berger", description:"Titounet est un chien qui a encore beaucoup à apprendre. Très dynamique et joueur.",location_cp:"06300")
+dogs17 = Dog.create!(user_id: user4.id, name: "Titounet", breed:"Berger", description:"Titounet est un chien qui a encore beaucoup à apprendre. Très dynamique et joueur.",location_cp:"06400")
 dogs17.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818465/titounet-1_ujt29u.jpg"), filename: "titounet-1.jpg", content_type: "image/jpg")
 dogs17.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818465/titounet-2_r7uwng.jpg"), filename: "titounet-2.jpg", content_type: "image/jpg")
 dogs17.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655818465/titounet-3_njtw8o.jpg"), filename: "titounet-3.jpg", content_type: "image/jpg")
