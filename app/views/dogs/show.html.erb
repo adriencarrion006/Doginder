@@ -3,7 +3,6 @@
 <%# <% end %>
 <div class="card-general">
   <div class="head">
-  <br>
     <h1>Doginder.</h1>
   </div>
   <div class="infos-dog">
@@ -35,14 +34,14 @@
     <div>
     <%= link_to "maitre", profil_path(@dog.user)  %>
     </div>
-        <p><i class="fas fa-paw"></i><%= @dog.breed %></p>
-        <p><i class="fas fa-map-marker-alt"></i><%= @dog.location_cp %></p>
-        <p><i class="fas fa-bone"></i><%= @dog.description %></p>
+      <p><i class="fas fa-paw"></i><%= @dog.breed %></p>
+      <p><i class="fas fa-map-marker-alt"></i><%= @dog.location_cp %></p>
+      <p><i class="fas fa-bone"></i><%= @dog.description %></p>
     </div>
       <div class="infos-boutons">
-        <div class="chattez">
+        <%# <div class="chattez">
           <%= link_to "Chattez!", dog_chatrooms_path(@dog.id), method: :post%>
-        </div>
+        <%# </div> %>
         <div class="retour">
           <%= link_to "retour", dogs_path%>
         </div>
