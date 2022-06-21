@@ -1,0 +1,28 @@
+.header, h1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+}
+
+#match-list, i{
+  color: white;
+  font-size: 40px;
+  padding: 1vh;
+}
+
+#match-list, a{
+  color: white;
+  font-size: 30px;
+  margin: 2vh;
+}
+
+#match-list, img{
+  // border-radius: 50%;
+  align-items: right;
+  margin-right: 1vh;
+}
+// .li{
+//   list-style: none;
+// }
