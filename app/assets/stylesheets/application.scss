@@ -12,13 +12,6 @@
 @import "components/index";
 @import "pages/index";
 
-// @import "pages/show_dogs";
-
-// body{
-//   height: 100vh;
-//   width: 100wh;
-
-// }
 
 #page-container{
   position: relative;
@@ -38,13 +31,13 @@ h1{
   font-size: 70px;
   text-align: center;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 20vh;
   width: 5em;
   color: white;
   margin-top: 3vh;
   margin-bottom: 3vh;
   font-weight: bolder;
-  
+
 }
 
 a{
