@@ -44,7 +44,7 @@
     </div>
       <div class="infos-boutons">
         <div class="chattez">
-          <%= link_to "Chattez!", dog_chatrooms_path(@dog.id), method: :post%>
+          <%= link_to "Chattez!", chatrooms_path(dog_id: @dog.id), method: :post%>
         </div>
         <div class="retour">
           <%= link_to "retour", dogs_path%>
