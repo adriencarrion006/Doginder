@@ -5,20 +5,18 @@
     <div class="slogan">
       <h2>Pour jouer à la baballe à plusieurs!</h2>
     </div>
-      <div class="core_home">
-      <%= link_to "dog", dogs_path%>
-        <%# <div>
-          <%# <%= link_to calendar_path(calendar) do %>
-          <%# <%= end %>
-        <%# </div>
-        <div> %>
-          <%# <%= link_to map_path(map) do %>
-          <%# <%= end %>
-        <%# </div>  %>
-            <%# <div> %>
-          <%# <%= link_to dogs_path(dogs) do %>
-          <%# <%= end %>
-        <%# </div>  %>
-      </div>
+    <div class="core-search">
+    <%= form_tag dogs_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Entrez votre code postal"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+    </div>
+    <div class="core_dog">
+      <%= link_to "dog", dogs_path, class: "btn btn-primary"%>
+    </div>
 
 </div>
