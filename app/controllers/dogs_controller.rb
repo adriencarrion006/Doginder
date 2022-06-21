@@ -1,7 +1,11 @@
 class DogsController < ApplicationController
   def index
     @match = Match.all
-    @dogs = Dog.all
+    if params[:query].present?
+      @dogs = Dog.where(location_cp: params[:query])
+    else
+      @dogs = Dog.all
+    end
   end
   def show
     @dog = Dog.find(params[:id])
@@ -39,7 +43,6 @@ class DogsController < ApplicationController
     end
 
   end
-
   private
 
   def dog_params

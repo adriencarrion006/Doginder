@@ -1,10 +1,11 @@
 <div class="card-general">
   <div class="head">
+  <br>
     <h1>Doginder.</h1>
   </div>
   <div class="infos-dog">
     <div class="dog-name">
-      <h1><%= @dog.name %></h1>
+      <h2><%= @dog.name %></h2>
     </div>
     <div class="description">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -28,6 +29,9 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    <div>
+    <%= link_to "maitre", profil_path(@dog.user)  %>
+    </div>
         <p><i class="fas fa-paw"></i><%= @dog.breed %></p>
         <p><i class="fas fa-map-marker-alt"></i><%= @dog.location_cp %></p>
         <p><i class="fas fa-bone"></i><%= @dog.description %></p>

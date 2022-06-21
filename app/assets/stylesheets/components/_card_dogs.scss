@@ -15,8 +15,8 @@ html, body{
   font-weight: bolder;
 }
 
-.dog-name{
-  font-size: 70px;
+.dog-name h2{
+  font-size: 50px;
   text-align: center;
   color: white;
   font-weight: bolder;
@@ -128,8 +128,8 @@ p{
 display: flex;
 align-items: center;
 height: 25px;
-}
-
-i {
-  margin: 2vh;
+  i{
+    margin: 2vh;
+    font-size: 20px;
+  }
 }
