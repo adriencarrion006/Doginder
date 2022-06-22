@@ -1,17 +1,15 @@
 
 <div class="tap">
-<% if user_signed_in? %>
-
-  <%= link_to profil_path(current_user) do %>
-
-    <div class="tapbar-account bouton">
-    <h2>Profil</h2>
-    </div>
+  <% if user_signed_in? %>
+    <%= link_to profil_path(current_user) do %>
+      <div class="tapbar-account bouton">
+        <h2>Profil</h2>
+      </div>
     <% end %>
-<% end %>
-  <%= link_to chatrooms_path do %>
-    <div class="tapbar-chat bouton">
-    <h2>Matches</h2>
-    </div>
+  <% end %>
+    <%= link_to chatrooms_path do %>
+      <div class="tapbar-chat bouton">
+        <h2>Matches</h2>
+      </div>
     <% end %>
 </div>

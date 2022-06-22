@@ -1,46 +1,35 @@
-<div class = "card-general">
+
+<div class="card-general">
   <div class="head">
-    <h1>Doginder.</h1>
+    <h1> profil </h1>
   </div>
-  <div class="infos-dog">
+    <div class = "infos-dog">
     <% if @user.id == current_user.id %>
-
-
-      <div class="dog-name">
-        <h2><%= @user.first_name %></h2>
+      <div id="avatar-user">
+        <%= image_tag @user.image_avatar, size:"150x150" %>
       </div>
-      <div class="description">
-        <%= image_tag @user.image_avatar, width:"100%", height:"300", crop:"fill" %>
-        <div>
+        <div class = "description">
+        <p><%= @user.description  %></p>
+        <p><%= @user.email %></p>
+        <p><%= @user.pseudo %></p>
+        <p><%= @user.first_name %></p>
+        <p><%= @user.last_name %></p>
           <%= link_to "create a new dog", new_dog_path%>
-          <p> My animals: </p>
+        <p> My animals: </p>
+          <div id="nom-animal">
             <% @user.dogs.each do |dog| %>
-              <%= dog.name %>
+            <%= dog.name %>
             <% end %>
-        </div>
-        <p>Pseudo :<%= @user.pseudo %></p>
-        <p>Prénom :<%= @user.first_name %></p>
-        <p>Nom :<%= @user.last_name %></p>
-        <p>Courriel :<%= @user.email %></p>
-        <p>Description :<%= @user.description  %></p>
-      </div>
-        <div class="infos-boutons">
-          <div class="retour">
-            <a href="/dogs">retour</a>
           </div>
-        </div>
-    </div>
-     <% else %>
-        <div class="dog-name">
-          <h2><%= @user.first_name %></h2>
-        </div>
-        <div class = "profil-content">
+      </div>
+        <% else %>
+        <div class = "description">
           <%= image_tag @user.image_avatar, size:"150x150" %>
           <p><%= @user.pseudo %></p>
           <p><%= @user.description  %></p>
+          <% end %>
         </div>
-      <% end %>
+        <%# <%= link_to "dog", dog_path(@dog)%>
+    </div>
+</div>
 
-
-
-<%# <div class = profil-card></div> %>
