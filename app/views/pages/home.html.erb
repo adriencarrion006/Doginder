@@ -15,6 +15,16 @@
       <%= submit_tag "Search", class: "tapbar-chat bouton" %>
       <% end %>
   </div>
+  <div id="core-search">
+    <%= form_tag dogs_path, method: :get do %>
+    <%= text_field_tag :queryinterest,
+      params[:queryinterest],
+      class: "form-control",
+      placeholder: "Ce que j'aime le plus "
+    %>
+      <%= submit_tag "Search", class: "tapbar-chat bouton" %>
+      <% end %>
+  </div>
   <div id="core_dog">
     <%= link_to "voir tous les compagnons de Baballe", dogs_path, class: "tapbar-chat bouton"%>
   </div>

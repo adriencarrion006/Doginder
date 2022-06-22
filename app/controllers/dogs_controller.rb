@@ -1,8 +1,12 @@
 class DogsController < ApplicationController
   def index
     @match = Match.all
-    if params[:query].present?
+    if params[:query].present? && params[:queryinterest].present?
+      @dogs = Dog.where(location_cp: params[:query]).where(centre_interet: params[:queryinterest])
+    elsif params[:query].present? && !params[:queryinterest].present?
       @dogs = Dog.where(location_cp: params[:query])
+    elsif !params[:query].present? && params[:queryinterest].present?
+      @dogs = Dog.where(centre_interet: params[:queryinterest])
     else
       @dogs = Dog.all
     end

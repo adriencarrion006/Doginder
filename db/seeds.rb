@@ -44,7 +44,7 @@ dogs.photos.attach(io: photo1, filename: "rex3.jpg", content_type: "image/jpg")
 dogs.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735601/rex2_ary3pg.jpg"), filename: "rex2.jpg", content_type: "image/jpg")
 dogs.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735586/rex_tacccj.jpg"), filename: "rex.jpg", content_type: "image/jpg")
 
-dogs1 = Dog.create!(user_id: user2.id, name: "lassie", breed:"border colier", centre_interet:"nager", description:"super gentille",location_cp:"06400")
+dogs1 = Dog.create!(user_id: user2.id, name: "lassie", breed:"border colier", centre_interet:"manger", description:"super gentille",location_cp:"06100")
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/lassie_uwonum.jpg"), filename: "lassie.jpg", content_type: "image/jpg")
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/lassie2_mgtcws.jpg"), filename: "lassi2.jpg", content_type: "image/jpg")
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/lassie3_ebumgj.jpg"), filename: "lassie3.jpg", content_type: "image/jpg")
@@ -54,7 +54,7 @@ dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736987/beethoven2_ytavk9.jpg"), filename: "beethoven2.jpg", content_type: "image/jpg")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/beethoven3_nqp7pr.jpg"), filename: "beethoven3.jpg", content_type: "image/jpg")
 
-dogs3 = Dog.create!(user_id: user4.id, name: "Rantanplan", breed:"malinoi", centre_interet:"Courir en montagne", description:"trés fidéle",location_cp:"06400")
+dogs3 = Dog.create!(user_id: user4.id, name: "Rantanplan", breed:"malinoi", centre_interet:"Courir en montagne", description:"trés fidéle",location_cp:"06100")
 dogs3.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/malinoi_drwzxe.jpg"), filename: "malinoi.jpg", content_type: "image/jpg")
 dogs3.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/malinoi2_yplel0.jpg"), filename: "malinoi2.jpg", content_type: "image/jpg")
 dogs3.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/malinoi3_c6wknj.jpg"), filename: "malinoi3.jpg", content_type: "image/jpg")
