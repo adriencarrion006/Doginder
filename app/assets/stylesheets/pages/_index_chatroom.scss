@@ -10,6 +10,7 @@
   color: white;
   font-size: 40px;
   padding: 1vh;
+  margin: 1vh;
 }
 
 #match-list, a{
@@ -18,11 +19,10 @@
   margin: 2vh;
 }
 
-#match-list, img{
-  // border-radius: 50%;
-  align-items: right;
+#match-list{
   margin-right: 1vh;
+  img{
+    align-items: right;
+    border-radius: 50%;
+  }
 }
-// .li{
-//   list-style: none;
-// }
