@@ -4,9 +4,22 @@
 <%# <%= cl_image_tag dog.photos.first.key, class: "rounded-circle"%>
   <div class="messages" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+    <% if message.user == current_user %>
+    <div class="messagesender">
+      <div class="messasendercontain">
+        <%= render "messages/message", message: message %>
+      </div>
+    </div>
+    <% else %>
+    <div class="messagerecipient text-end">
+      <div class="messagerecipeintcontain">
+        <%= render "messages/message", message: message %>
+      </div>
+      </div>
     <% end %>
-  </div>
+    <% end %>
+      </div>
+
 <div class="sendmessage">
     <%= simple_form_for [@chatroom, @message],
       remote: true,
