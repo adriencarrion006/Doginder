@@ -126,10 +126,23 @@ html, body{
 p{
   margin-top: 1vh;
 display: flex;
-align-items: center;
 height: 25px;
   i{
-    margin: 2vh;
     font-size: 20px;
   }
 }
+
+#info{
+  height: 30vh;
+  overflow: scroll;
+  font-size: 20px;
+  text-align: left;
+  }
+
+  .name{
+    h2{
+      color: black;
+      font-weight: bolder;
+      font-size: 40px;
+    }
+  }

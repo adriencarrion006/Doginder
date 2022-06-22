@@ -1,35 +1,42 @@
 
 <div class="card-general">
   <div class="head">
-    <h1> profil </h1>
+    <h1><%= @user.pseudo %></h1>
   </div>
     <div class = "infos-dog">
     <% if @user.id == current_user.id %>
       <div id="avatar-user">
         <%= image_tag @user.image_avatar, size:"150x150" %>
+        <% @user.dogs.each do |dog| %>
+        <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <% end %>
       </div>
         <div class = "description">
+        <p><strong> Ma description: </strong></p>
         <p><%= @user.description  %></p>
+        <p><strong> Mon Email: </strong></p>
         <p><%= @user.email %></p>
+        <p><strong> Mon pseudo: </strong></p>
         <p><%= @user.pseudo %></p>
+        <p><strong> Mon prenom: </strong></p>
         <p><%= @user.first_name %></p>
+        <p><strong> Mon nom:</strong></p>
         <p><%= @user.last_name %></p>
-          <%= link_to "create a new dog", new_dog_path%>
-        <p> My animals: </p>
-          <div id="nom-animal">
-            <% @user.dogs.each do |dog| %>
-            <%= dog.name %>
-            <% end %>
-          </div>
       </div>
-        <% else %>
-        <div class = "description">
-          <%= image_tag @user.image_avatar, size:"150x150" %>
-          <p><%= @user.pseudo %></p>
-          <p><%= @user.description  %></p>
-          <% end %>
+        <div class="dog-create">
+          <%= link_to "Ajouter un chien", new_dog_path%>
         </div>
-        <%# <%= link_to "dog", dog_path(@dog)%>
+        <% else %>
+          <div id="avatar-user">
+            <%= image_tag @user.image_avatar, size:"150x150" %>
+            <% @user.dogs.each do |dog| %>
+          <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+          </div>
+        <% end %>
+        <% end %>
+          <div class = "description">
+            <p><%= @user.pseudo %></p>
+            <p><%= @user.description  %></p>
+        </div>
     </div>
 </div>
-
