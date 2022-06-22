@@ -1,7 +1,20 @@
- .lol {
-  font-size: 70px;
-  text-align: center;
-  color: white;
+// .lol {
+//   font-size: 70px;
+//   text-align: center;
+//   color: white;
+//   font-weight: bolder;
+//   position: sticky;
+// }
+
+#nom-animal{
+  font-size: 30px;
   font-weight: bolder;
-  position: sticky;
+  color: white;
+  margin-left: 2vh;
+}
+
+#avatar-user{
+  img{
+    border-radius: 25px;
+  }
 }

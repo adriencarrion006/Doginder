@@ -1,16 +1,7 @@
 .messages {
 overflow: scroll;
-height: 90vh;
+height: 60vh;
 }
-// .chatroom {
-//   background: white;
-//   margin-top: 9px;
-//   height: calc(100vh - 75px);
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   flex-grow: 1;
-// }
 
 .messasendercontain{
   background-color: #fbfbfd;
@@ -26,22 +17,16 @@ height: 90vh;
 
 
 .messagerecipeintcontain{
-
   background-color: #158ffe;
-  color: #fff;
-  // float: right;
   margin-right: 55px;
   display: inline-block;
   border-radius: 30px;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  .p{
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+  }
 }
-// .chatroom-chat{
-  // position: absolute;
-  // width: 90wh;
-  // }
-
-  // .sendmessage{
-  //   // width: 90wh;
-  // }
