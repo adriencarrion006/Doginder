@@ -17,7 +17,7 @@
   </div>
   <div id="core-search">
     <%= form_tag dogs_path, method: :get do %>
-    <%= text_field_tag :queryinterest,
+    <%= select :queryinterest,
       params[:queryinterest],
       class: "form-control",
       placeholder: "Ce que j'aime le plus "
