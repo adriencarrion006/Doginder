@@ -44,7 +44,9 @@
     </div>
       <p><i class="fas fa-paw"></i><%= @dog.breed %></p>
       <p><i class="fas fa-map-marker-alt"></i><%= @dog.location_cp %></p>
-      <p><i class="fas fa-bone"></i><%= @dog.description %></p>
+      <div id="info">
+        <p><i class="fas fa-bone"></i><%= @dog.description %></p>
+      </div>
     </div>
       <div class="infos-boutons">
 
@@ -53,9 +55,9 @@
         <%# </div> %>
 
 
-        <div class="retour">
+        <%# <div class="retour">
           <%= link_to "retour", dogs_path%>
-        </div>
+        <%# </div> %>
       </div>
     </div>
   </div>
