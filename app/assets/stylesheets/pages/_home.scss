@@ -22,10 +22,23 @@ html, body {
   text-align: center;
 }
 
-.core-search, .form-control{
-  width: 20vh;
+#core-search, .form-control{
+  width: 25vh;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 6vh;
+  font-weight: bolder;
+  color: white;
+}
+
+
+#core_dog{
+  width: 25vh;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  font-weight: bolder;
+  color: white;
 }

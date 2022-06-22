@@ -12,7 +12,7 @@
   <% end %>
   <ul>
     <% @dogs.each do |dog| %>
-      <li><i class="far fa-comment-dots"></i><%=link_to "#{dog.name}", chatrooms_path(dog_id: dog.id), method: :post%><%= cl_image_tag dog.photos.first.key, height: 50, width: 50, crop: :fill %>
+      <li><i class="far fa-comment-dots"></i><%=link_to "#{dog.name}", chatrooms_path(dog_id: dog.id), method: :post%><%= cl_image_tag dog.photos.first.key, height: 70, width: 70, crop: :fill %>
 </li>
     <% end %>
   </ul>
