@@ -4,16 +4,16 @@
   </div>
       <%= simple_form_for @dog do |f| %>
       <div class="field-create">
-        <%= f.input :name %>
+        <%= f.input :name, label: "Nom" %>
       </div>
       <div class="field-create">
-        <%= f.input :breed %>
+        <%= f.input :breed, label: "Race" %>
       </div>
       <div class="field-create">
-        <%= f.input :location_cp %>
+        <%= f.input :location_cp, label: "Code Postal" %>
       </div>
       <div class="field-create">
-        <%= f.input :description %>
+        <%= f.input :description, label: "Description" %>
       </div>
       <div class="field-create">
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
@@ -24,7 +24,7 @@
 "Mordre le facteur", "Jouer au freesbee"] %>
       <%# </div> %>
       <div class="field-create">
-        <%= f.submit class: 'btn btn-primary' %>
+        <%= f.submit "Ajouter le chien", class: 'btn btn-primary' %>
       </div>
       <% end %>
 </div>
