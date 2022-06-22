@@ -1,7 +1,7 @@
 <div id="message-<%= message.id %>">
 <small>
                 <strong><%= message.user.dogs.first.name %></strong>
-            <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+            <i id="msg-date"><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
           </small>
           <p><%= message.content %></p>
 

@@ -19,8 +19,9 @@
     <%= form_tag dogs_path, method: :get do %>
     <%= select :queryinterest,
       params[:queryinterest],
-      class: "form-control",
-      placeholder: "Ce que j'aime le plus "
+       ["manger", "Nager", "Voler des chaussettes", "Courir en montagne", "Faire la sieste", "Creuser des trous",
+"Chasser les chats", "Ronger mon nonos", "Jouer à la baballe", "Canicross", "Agility", "Suivre une piste","Attraper les méchants",
+"Mordre le facteur", "Jouer au freesbee"]
     %>
       <%= submit_tag "Search", class: "tapbar-chat bouton" %>
       <% end %>

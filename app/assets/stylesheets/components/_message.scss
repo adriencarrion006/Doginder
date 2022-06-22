@@ -1,6 +1,11 @@
 .messages {
-overflow: scroll;
-height: auto;
+  overflow: scroll;
+  height: auto;
+  p{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(12, 7, 7);
+  }
 }
 
 .messasendercontain{
@@ -24,9 +29,10 @@ height: auto;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  .p{
-    font-size: 20px;
-    font-weight: bolder;
-    color: black;
-  }
+}
+
+#msg-date{
+  font-size: 10px;
+  font-weight: bolder;
+  color: black;
 }
