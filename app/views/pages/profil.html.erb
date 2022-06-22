@@ -1,26 +1,33 @@
-
-<h1> profil </h1>
-  <div class = profil-card>
-  <% if @user.id == current_user.id %>
-    <%= image_tag @user.image_avatar, size:"150x150" %>
-    <div class = "profil-content">
-      <p><%= @user.description  %></p>
-      <p><%= @user.email %></p>
-      <p><%= @user.pseudo %></p>
-      <p><%= @user.first_name %></p>
-      <p><%= @user.last_name %></p>
-        <%= link_to "create a new dog", new_dog_path%>
-      <p> My animals: </p>
-        <% @user.dogs.each do |dog| %>
-        <%= dog.name %>
-        <% end %>
-    </div>
-      <% else %>
-      <div class = "profil-content">
+<div class="card-general">
+  <div class="head">
+    <h1> profil </h1>
+  </div>
+    <div class = "infos-dog">
+    <% if @user.id == current_user.id %>
+      <div id="avatar-user">
         <%= image_tag @user.image_avatar, size:"150x150" %>
-        <p><%= @user.pseudo %></p>
+      </div>
+        <div class = "description">
         <p><%= @user.description  %></p>
-        <% end %>
+        <p><%= @user.email %></p>
+        <p><%= @user.pseudo %></p>
+        <p><%= @user.first_name %></p>
+        <p><%= @user.last_name %></p>
+          <%= link_to "create a new dog", new_dog_path%>
+        <p> My animals: </p>
+          <div id="nom-animal">
+            <% @user.dogs.each do |dog| %>
+            <%= dog.name %>
+            <% end %>
+          </div>
+      </div>
+        <% else %>
+        <div class = "description">
+          <%= image_tag @user.image_avatar, size:"150x150" %>
+          <p><%= @user.pseudo %></p>
+          <p><%= @user.description  %></p>
+          <% end %>
+        </div>
+        <%# <%= link_to "dog", dog_path(@dog)%>
     </div>
-    <%# <%= link_to "dog", dog_path(@dog)%> %>
 </div>

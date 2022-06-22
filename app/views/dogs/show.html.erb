@@ -15,12 +15,12 @@
           <div class="carousel-item active" data-bs-interval="1">
           <%= cl_image_tag @dog.photos.first.key, height: 300, width: 400, crop: :fill %>
           </div>
-         <% @dog.photos.each do |photo| %>
-         <div class="carousel-item">
-         <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <% @dog.photos.each do |photo| %>
+        <div class="carousel-item">
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
         </div>
-         <% end %>
-         </div>
+        <% end %>
+        </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
