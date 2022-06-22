@@ -86,6 +86,8 @@ const swipe = () => {
     function like(target, like) {
       // console.log(target.dataset.id, like)
       const url = `/dogs/${target.dataset.id}/edit/?like=${like}`
+      // const url = `/dogs/${target.dataset.id}/matches/new/?like=${like}`
+
       fetch(url, {
         method: 'GET',
         headers: {
