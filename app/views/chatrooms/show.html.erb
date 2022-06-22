@@ -1,7 +1,12 @@
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
- <%# <%= cl_image_tag dog.photos.first.key, class: "rounded-circle"%> 
+<%# <%= cl_image_tag dog.photos.first.key, class: "rounded-circle"%>
+  <div class="messages" data-chatroom-subscription-target="messages">
+    <% @chatroom.messages.each do |message| %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  </div>
 <div class="sendmessage">
     <%= simple_form_for [@chatroom, @message],
       remote: true,
@@ -12,14 +17,7 @@
         wrapper_html: {class: "flex-grow-1"}
       %>
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
       <%= f.submit "Send", class: "btn btn-primary " %>
-
     <% end %>
 </div>
-  <div class="messages" data-chatroom-subscription-target="messages">
-    <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
-    <% end %>
-  </div>
 </div>

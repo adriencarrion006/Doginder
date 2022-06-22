@@ -13,9 +13,6 @@
 }
 
 .field-create{
-  font-size: 20px;
-  font-weight: bolder;
-  color: black;
   text-align: left;
   margin-left: 2vh;
   height: 12vh;
@@ -25,4 +22,10 @@
 #core-search, .form-control {
   margin-top: 0vh;
   text-align: center;
+}
+
+.form-control{
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
 }
