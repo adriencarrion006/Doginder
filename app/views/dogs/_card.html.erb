@@ -1,14 +1,16 @@
 
-     <div class="tinder--card" data-id=<%= dog.id %>>
+<div class="tinder--card" data-id=<%= dog.id %>>
         <%# <img src="https://placeimg.com/600/300/people"> %>
-<% if dog.photos.attached? %>
+  <% if dog.photos.attached? %>
   <%= cl_image_tag dog.photos.first.key, height: 300, width: 400, crop: :fill %>
-<% else %>
+  <% else %>
   <%= image_tag "dog.jpg", height: 300, width: 400, crop: :fill %>
-<% end %>
-
-        <h3> <%= dog.name %></h3>
-        <%= link_to "voir plus", dog_path(dog) %>
+  <% end %>
+    <div  class="name">
+      <%= link_to dog_path(dog) do %>
+        <h2><%= dog.name %></h2>
+      <% end %>
+    </div>
         <h2>Ce que j'aime faire :</h2>
         <%= dog.centre_interet %>
-      </div>
+</div>
