@@ -1,9 +1,30 @@
-     <h3>Create a new dog</h3>
-        <%= simple_form_for @dog do |f| %>
-          <%= f.input :name %>
-          <%= f.input :breed %>
-          <%= f.input :description %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-          <%= f.input :location_cp %>
-          <%= f.submit class: 'btn btn-flat' %>
-        <% end %>
+<div class="general-create">
+  <div class="titre-create">
+    <h3>Mon chien.</h3>
+  </div>
+      <%= simple_form_for @dog do |f| %>
+      <div class="field-create">
+        <%= f.input :name %>
+      </div>
+      <div class="field-create">
+        <%= f.input :breed %>
+      </div>
+      <div class="field-create">
+        <%= f.input :location_cp %>
+      </div>
+      <div class="field-create">
+        <%= f.input :description %>
+      </div>
+      <div class="field-create">
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      </div>
+      <%# <div class="field-create">
+        <%= f.input :centre_interet, collection:["Nager", "Voler des chaussettes", "Courir en montagne", "Faire la sieste", "Creuser des trous",
+"Chasser les chats", "Ronger mon nonos", "Jouer à la baballe", "Canicross", "Agility", "Suivre une piste","Attraper les méchants",
+"Mordre le facteur", "Jouer au freesbee"] %>
+      <%# </div> %>
+      <div class="field-create">
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+      <% end %>
+</div>
