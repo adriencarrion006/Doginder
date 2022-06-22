@@ -126,10 +126,19 @@ html, body{
 p{
   margin-top: 1vh;
 display: flex;
-align-items: center;
+// align-items: center;
 height: 25px;
   i{
-    margin: 2vh;
     font-size: 20px;
   }
 }
+
+#info{
+  height: 30vh;
+  overflow: scroll;
+  // margin: 2vh;
+  font-size: 20px;
+  text-align: left;
+  }
+  // font-size: 20px;
+  // color: white;
