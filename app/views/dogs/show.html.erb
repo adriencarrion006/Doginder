@@ -10,8 +10,10 @@
       <h2><%= @dog.name %></h2>
     </div>
     <div class="description">
+      <% if @dog.photos.attached? %>
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+
           <div class="carousel-item active" data-bs-interval="1">
           <%= cl_image_tag @dog.photos.first.key, height: 300, width: 400, crop: :fill %>
           </div>
@@ -30,6 +32,10 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+    <% else %>
+      <%= image_tag "dog.jpg", height: 300, width: 400, crop: :fill %>
+      <% end %>
+
     <div>
 <% if user_signed_in? %>
 
