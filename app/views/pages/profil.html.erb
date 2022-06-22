@@ -23,15 +23,20 @@
         <p><strong> Mon nom:</strong></p>
         <p><%= @user.last_name %></p>
       </div>
-        <% else %>
-        <div class = "description">
-          <%= image_tag @user.image_avatar, size:"150x150" %>
-          <p><%= @user.pseudo %></p>
-          <p><%= @user.description  %></p>
-          <% end %>
-        </div>
         <div class="dog-create">
           <%= link_to "Ajouter un chien", new_dog_path%>
+        </div>
+        <% else %>
+          <div id="avatar-user">
+            <%= image_tag @user.image_avatar, size:"150x150" %>
+            <% @user.dogs.each do |dog| %>
+          <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+          </div>
+        <% end %>
+        <% end %>
+          <div class = "description">
+            <p><%= @user.pseudo %></p>
+            <p><%= @user.description  %></p>
         </div>
     </div>
 </div>

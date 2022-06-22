@@ -126,7 +126,6 @@ html, body{
 p{
   margin-top: 1vh;
 display: flex;
-// align-items: center;
 height: 25px;
   i{
     font-size: 20px;
@@ -136,9 +135,14 @@ height: 25px;
 #info{
   height: 30vh;
   overflow: scroll;
-  // margin: 2vh;
   font-size: 20px;
   text-align: left;
   }
-  // font-size: 20px;
-  // color: white;
+
+  .name{
+    h2{
+      color: black;
+      font-weight: bolder;
+      font-size: 40px;
+    }
+  }
