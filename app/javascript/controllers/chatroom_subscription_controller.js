@@ -25,5 +25,6 @@ export default class extends Controller {
   }
   resetForm(event) {
     event.target.reset();
+    
   }
 }
