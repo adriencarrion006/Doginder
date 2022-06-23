@@ -1,3 +1,7 @@
+.card-general{
+  height: 88vh;
+}
+
 .head{
   height: 0vh;
 }
@@ -34,7 +38,7 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  margin-block-end: 2vh;
+  // margin-block-end: 2vh;
     a{
       text-align: center;
       display: flex;
