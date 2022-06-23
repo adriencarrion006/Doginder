@@ -2,14 +2,6 @@
   <h1>Doginder.</h1>
 </div>
 <div class="match-list">
-  <% @chatrooms.each do |chatroom| %>
-    <% if chatroom.sender == current_user.id %>
-      <% receveur = User.find(chatroom.recipient) %>
-    <% else %>
-      <% receveur = User.find(chatroom.sender) %>
-    <% end %>
-    <% link_to receveur.email, chatroom_path(chatroom.id) %>
-  <% end %>
   <ul>
     <% @dogs.each do |dog| %>
     <% if dog.photos.attached? %>
