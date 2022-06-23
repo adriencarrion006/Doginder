@@ -1,4 +1,3 @@
-
 <div class="card-general">
   <div class="head">
     <h1>Doginder.</h1>
@@ -8,43 +7,38 @@
       <h2><%= @dog.name %></h2>
     </div>
     <div class="description">
+
       <% if @dog.photos.attached? %>
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1">
+          <div class="carousel-item active dogshow-dogphoto" data-bs-interval="1">
           <%= cl_image_tag @dog.photos.first.key, height: 300, width: 400, crop: :fill %>
           </div>
         <% @dog.photos.each do |photo| %>
-        <div class="carousel-item">
+        <div class="carousel-item dogshow-dogphoto">
         <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
         </div>
         <% end %>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="visually-hidden">Next</span>
-        </button>
+
       </div>
-    <% else %>
-      <%= image_tag "dog.jpg", height: 300, width: 400, crop: :fill %>
-      <% end %>
-    <div>
+    <div class="dogshow-useravatar">
       <% if user_signed_in? %>
       <%= link_to profil_path(@dog.user) do  %>
-        <%= image_tag @dog.user.image_avatar, size:"100x120",class:"img-radius"  %>
+        <%= image_tag @dog.user.image_avatar, size:"100x100",class:"img-radius"  %>
         <% end %>
       <% end %>
     </div>
+    <% else %>
+      <%= image_tag "dog.jpg", height: 300, width: 400, crop: :fill %>
+      <% end %>
+</div>
       <p><i class="fas fa-paw"></i> &nbsp; &nbsp; <%= @dog.breed %></p>
       <p><i class="fas fa-map-marker-alt"></i> &nbsp; &nbsp; <%= @dog.location_cp %></p>
-      <div id="info">
+
         <p><i class="fas fa-bone"></i> &nbsp; &nbsp; <%= @dog.description %></p>
-      </div>
+
     </div>
-      <div class="infos-boutons">
-      </div>
-    </div>
+
+
   </div>
 </div>
