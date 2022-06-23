@@ -39,7 +39,7 @@ user19 = User.create!(email:"m@gmail.com", password:"lechien", pseudo: "Damssss"
 
 
 
-dogs = Dog.create!(user_id: user1.id, name: "rex", breed:"berger allemand", centre_interet:"Canicross", fontawesome:"fas fa-running", description:"il fouille partout",location_cp:"06400")
+dogs = Dog.create!(user_id: user13.id, name: "rex", breed:"berger allemand", centre_interet:"Canicross", fontawesome:"fas fa-running", description:"il fouille partout",location_cp:"06400")
 
 
 photo1 = URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735608/rex3_ghqkuw.jpg")
