@@ -11,7 +11,7 @@
 
         <%= link_to dog_path(dog.id) do %>
         <div class="dogavatar">
-        <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
         </div>
         <% end %>
         <% end %>
@@ -35,9 +35,11 @@
           <div id="avatar-user">
             <%= image_tag @user.image_avatar, size:"300x300" %>
             <% @user.dogs.each do |dog| %>
-            <div class="dogavatar">
-          <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
-          </div>
+        <%= link_to dog_path(dog.id) do %>
+        <div class="dogavatar">
+        <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
+        </div>
+        <% end %>
         <% end %>
           </div>
                 <div class = "description">
