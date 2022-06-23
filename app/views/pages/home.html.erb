@@ -12,22 +12,18 @@
       class: "form-control",
       placeholder: "Entrez votre code postal"
     %>
-      <%= submit_tag "Search", class: "tapbar-chat bouton" %>
-      <% end %>
-  </div>
-  <div id="core-search">
-    <%= form_tag dogs_path, method: :get do %>
+
+
     <%= select :queryinterest,
       params[:queryinterest],
-
        ["manger", "Nager", "Voler des chaussettes", "Courir en montagne", "Faire la sieste", "Creuser des trous",
-
 "Chasser les chats", "Ronger mon nonos", "Jouer à la baballe", "Canicross", "Agility", "Suivre une piste","Attraper les méchants",
-"Mordre le facteur", "Jouer au freesbee"]
+"Mordre le facteur", "Jouer au freesbee"],include_blank: "ce que j'aime faire"
     %>
       <%= submit_tag "Search", class: "tapbar-chat bouton" %>
       <% end %>
   </div>
+  
   <div id="core_dog">
     <%= link_to "voir tous les compagnons de Baballe", dogs_path, class: "tapbar-chat bouton"%>
   </div>
