@@ -6,17 +6,13 @@
   <% else %>
   <%= image_tag "dog.jpg", height: 300, width: 400, crop: :fill %>
   <% end %>
-    <span class="name">
+    <div class="name">
       <%= link_to dog_path(dog) do %>
         <h2><%= dog.name %></h2>
       <% end %>
 
-
-        <h2>Ce que j'aime faire :</h2>
-        <i class="<%= dog.fontawesome %>"></i>
-
       <h4>Ce que j'aime faire :</h4>
       <i class="<%= dog.fontawesome %>"></i>
       <%= dog.centre_interet %>
-    </span>
+    </div>
 </div>

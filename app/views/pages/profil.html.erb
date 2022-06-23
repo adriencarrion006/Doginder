@@ -6,9 +6,9 @@
     <div class = "infos-dog">
     <% if @user.id == current_user.id %>
       <div id="avatar-user">
-        <%= image_tag @user.image_avatar, size:"150x150" %>
+        <%= image_tag @user.image_avatar, size:"300x400"%>
         <% @user.dogs.each do |dog| %>
-        <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill, radius:"max" %>
         <% end %>
       </div>
         <div class = "description">
@@ -28,9 +28,11 @@
         </div>
         <% else %>
           <div id="avatar-user">
-            <%= image_tag @user.image_avatar, size:"150x150" %>
+            <%= image_tag @user.image_avatar, size:"300x300" %>
             <% @user.dogs.each do |dog| %>
-          <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+            <div class="dogavatar">
+          <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
+          </div>
         <% end %>
           </div>
                 <div class = "description">
