@@ -10,7 +10,13 @@
       <%= link_to dog_path(dog) do %>
         <h2><%= dog.name %></h2>
       <% end %>
+
+
+        <h2>Ce que j'aime faire :</h2>
+        <i class="<%= dog.fontawesome %>"></i>
+
       <h4>Ce que j'aime faire :</h4>
-        <%= dog.centre_interet %>
+      <i class="<%= dog.fontawesome %>"></i>
+      <%= dog.centre_interet %>
     </span>
 </div>
