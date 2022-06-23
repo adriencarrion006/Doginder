@@ -133,16 +133,23 @@ height: 25px;
 }
 
 #info{
-  height: 30vh;
+  height: 0vh;
   overflow: scroll;
   font-size: 20px;
   text-align: left;
+  position: absolute;
+  padding-top: 0vh;
   }
 
-  .name{
-    h2{
-      color: black;
-      font-weight: bolder;
-      font-size: 40px;
-    }
+.dog-name{
+  h2{
+    color: white;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-top: 60px !important;
   }
+}
+
+img{
+  border-radius: 25px;
+}
