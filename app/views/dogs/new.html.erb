@@ -21,9 +21,7 @@
         <%= f.input :photos, as: :file, input_html: { multiple: true },label: "Photos" %>
       </div>
       <div class="field-create">
-        <%= f.input :centre_interet, collection:["Nager", "Voler des chaussettes", "Courir en montagne", "Faire la sieste", "Creuser des trous",
-"Chasser les chats", "Ronger mon nonos", "Jouer à la baballe", "Canicross", "Agility", "Suivre une piste","Attraper les méchants",
-"Mordre le facteur", "Jouer au freesbee"], label: "Loisir favori" %>
+         <%= f.input :centre_interet, collection: ["Canicross", "Manger miam miam", "Parcours d'agilité", "Courir en montagne", "Nager", "Chasser les chats", "Ronger mon nonos", "Jouer à la babille", "Faire la sieste", "Poursuivre le facteur"],include_blank: "Mon loisir favori", label: "Loisir favori" %>
       </div>
       <div class="field-create">
         <%= f.submit "Ajouter le chien", class: 'btn btn-primary' %>
