@@ -31,8 +31,14 @@
             <%= image_tag @user.image_avatar, size:"150x150" %>
             <% @user.dogs.each do |dog| %>
           <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
-          </div>
         <% end %>
+          </div>
+                <div class = "description">
+        <p><strong> Pseudo: </strong></p>
+        <p><%= @user.pseudo %></p>
+        <p><strong> Description: </strong></p>
+        <p><%= @user.description  %></p>
+      </div>
         <% end %>
     </div>
 </div>
