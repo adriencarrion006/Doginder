@@ -9,7 +9,7 @@
   }
 }
 
-.messasendercontain{
+.messagerecipeintcontain{
   background-color: #fbfbfd;
   // float: left;
   margin-left: 55px;
@@ -23,11 +23,12 @@
 }
 
 
-.messagerecipeintcontain{
+.messasendercontain{
   background-color: #158ffe;
   margin-right: 55px;
   display: inline-block;
   border-radius: 30px;
+  border: 1px solid black;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;

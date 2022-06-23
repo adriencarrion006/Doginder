@@ -33,7 +33,7 @@
     <div>
       <% if user_signed_in? %>
       <%= link_to profil_path(@dog.user) do  %>
-        <%= image_tag @dog.user.image_avatar, size:"100x120"  %>
+        <%= image_tag @dog.user.image_avatar, size:"100x120",class:"img-radius"  %>
         <% end %>
       <% end %>
     </div>
