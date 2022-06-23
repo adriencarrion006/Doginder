@@ -8,7 +8,9 @@
       <div id="avatar-user">
         <%= image_tag @user.image_avatar, size:"150x150" %>
         <% @user.dogs.each do |dog| %>
+        <%= link_to dog_path(dog.id) do %>
         <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <% end %>
         <% end %>
       </div>
         <div class = "description">
