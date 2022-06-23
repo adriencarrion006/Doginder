@@ -6,20 +6,19 @@
   background: transparent;
 }
 
-#match-list, i{
+.match-list, i{
   color: white;
   font-size: 40px;
-  padding: 1vh;
-  // margin: 1vh;
+  padding: 0vh;
 }
 
-#match-list, a{
+.match-list, a{
   color: white;
   font-size: 30px;
   margin: 2vh;
 }
 
-#match-list{
+.match-list{
   margin-right: 1vh;
   img{
     align-items: right;
