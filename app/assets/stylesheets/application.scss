@@ -12,13 +12,28 @@
 @import "components/index";
 @import "pages/index";
 
+html{
+  position: relative;
+  min-height: 88vh;
+}
+
+body{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "main" "table";
+  height: 100vh;
+  width: 100%;
+}
+
+main{
+overflow-y: scroll;
+grid-area: main;
+width: 100%;
+}
 
 #page-container{
   position: relative;
-  min-height: 100vh;
-
-//   height: 90vh; width: 100vw
-
+  min-height: 88vh;
 }
 
 .header{
