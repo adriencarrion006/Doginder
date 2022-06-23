@@ -10,8 +10,12 @@
 
         <%= link_to dog_path(dog.id) do %>
         <div class="dogavatar">
+         <% if dog.photos.attached? %>
         <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
-        </div>
+        <% else %>
+      <%= image_tag "dog.jpg", height: 100, width: 100, crop: :fill %>
+      <% end %>
+         </div>
         <% end %>
         <% end %>
       </div>
@@ -30,7 +34,11 @@
             <% @user.dogs.each do |dog| %>
         <%= link_to dog_path(dog.id) do %>
         <div class="dogavatar">
+        <% if dog.photos.attached? %>
         <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
+        <% else %>
+      <%= image_tag "dog.jpg", height: 100, width: 100, crop: :fill %>
+      <% end %>
         </div>
         <% end %>
         <% end %>
