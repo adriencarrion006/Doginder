@@ -1,17 +1,22 @@
 <div class="header">
   <h1>Doginder.</h1>
 </div>
-<div id="match-list">
-  
+<div class="match-list">
+  <% @chatrooms.each do |chatroom| %>
+    <% if chatroom.sender == current_user.id %>
+      <% receveur = User.find(chatroom.recipient) %>
+    <% else %>
+      <% receveur = User.find(chatroom.sender) %>
+    <% end %>
+    <% link_to receveur.email, chatroom_path(chatroom.id) %>
+  <% end %>
   <ul>
     <% @dogs.each do |dog| %>
-
     <% if dog.photos.attached? %>
           <li><i class="far fa-comment-dots"></i><%=link_to "#{dog.name}", chatrooms_path(dog_id: dog.id), method: :post%><%= cl_image_tag dog.photos.first.key, height: 50, width: 50, crop: :fill %>
           <% else %>
       <li><i class="far fa-comment-dots"></i><%=link_to "#{dog.name}", chatrooms_path(dog_id: dog.id), method: :post%><%= image_tag "dog.jpg", height: 50, width: 50, crop: :fill %>
       <% end %>
-
 </li>
     <% end %>
   </ul>

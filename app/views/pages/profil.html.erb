@@ -23,7 +23,7 @@
         <p><strong> Mon nom:</strong></p>
         <p><%= @user.last_name %></p>
       </div>
-        <div class="dog-create">
+        <div id="dog-create">
           <%= link_to "Ajouter un chien", new_dog_path%>
         </div>
         <% else %>
@@ -34,9 +34,5 @@
           </div>
         <% end %>
         <% end %>
-          <div class = "description">
-            <p><%= @user.pseudo %></p>
-            <p><%= @user.description  %></p>
-        </div>
     </div>
 </div>
