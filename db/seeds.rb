@@ -49,7 +49,7 @@ dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/lassie2_mgtcws.jpg"), filename: "lassi2.jpg", content_type: "image/jpg")
 dogs1.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/lassie3_ebumgj.jpg"), filename: "lassie3.jpg", content_type: "image/jpg")
 
-dogs2 = Dog.create!(user_id: user3.id, name: "Beethoven", breed:"Saint-Bernard", centre_interet:"Voler des chaussettes", description:"il mange trop de croquettes",location_cp:"06400")
+dogs2 = Dog.create!(user_id: user3.id, name: "Beethoven", breed:"Saint-Bernard", centre_interet:"manger", description:"il mange trop de croquettes",location_cp:"06400")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736986/beethoven_a5kcdk.jpg"), filename: "beethoven.jpg", content_type: "image/jpg")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736987/beethoven2_ytavk9.jpg"), filename: "beethoven2.jpg", content_type: "image/jpg")
 dogs2.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655736985/beethoven3_nqp7pr.jpg"), filename: "beethoven3.jpg", content_type: "image/jpg")
