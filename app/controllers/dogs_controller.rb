@@ -1,17 +1,18 @@
 class DogsController < ApplicationController
   def index
-    @match = Match.all
-    if params[:query].present? && params[:queryinterest] != ""
-      dogs = Dog.where(location_cp: params[:query]).where(centre_interet: params[:queryinterest].first)
-    elsif params[:query].present? && params[:queryinterest] == ""
-      dogs = Dog.where(location_cp: params[:query])
-    elsif !params[:query].present? && params[:queryinterest] != ""
-      dogs = Dog.where(centre_interet: params[:queryinterest].first)
+    dogs = Dog.where.not(user_id: current_user.id).where(like: nil)
+    if params[:query].blank? && params[:queryinterest].nil?
+      @dogs = dogs
+    elsif params[:query].blank? && params[:queryinterest].first.blank?
+      @dogs = dogs
+    elsif !params[:query].blank? && params[:queryinterest].first.present?
+      @dogs = dogs.where(centre_interet: params[:queryinterest].first).where(location_cp: params[:query])
+    elsif !params[:query].blank?
+      @dogs = dogs.where(location_cp: params[:query])
+    elsif params[:queryinterest].first.present?
+      @dogs = dogs.where(centre_interet: params[:queryinterest].first)
     else
-      dogs = Dog.all
-    end
-    @dogs = dogs.reject do |dog|
-      dog.user == current_user
+      @dogs = []
     end
   end
   def show

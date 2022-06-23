@@ -1,6 +1,7 @@
 .messages {
   overflow: scroll;
   height: 80VH;
+
   p{
     font-size: 20px;
     font-weight: bolder;
@@ -18,6 +19,7 @@
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  // opacity:0;
 }
 
 
@@ -29,6 +31,7 @@
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  // opacity:0;
 }
 
 #msg-date{

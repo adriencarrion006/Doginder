@@ -23,7 +23,7 @@
         <p><strong> Mon nom:</strong></p>
         <p><%= @user.last_name %></p>
       </div>
-        <div class="dog-create">
+        <div id="dog-create">
           <%= link_to "Ajouter un chien", new_dog_path%>
         </div>
         <% else %>
@@ -31,12 +31,14 @@
             <%= image_tag @user.image_avatar, size:"150x150" %>
             <% @user.dogs.each do |dog| %>
           <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <% end %>
           </div>
+                <div class = "description">
+        <p><strong> Pseudo: </strong></p>
+        <p><%= @user.pseudo %></p>
+        <p><strong> Description: </strong></p>
+        <p><%= @user.description  %></p>
+      </div>
         <% end %>
-        <% end %>
-          <div class = "description">
-            <p><%= @user.pseudo %></p>
-            <p><%= @user.description  %></p>
-        </div>
     </div>
 </div>

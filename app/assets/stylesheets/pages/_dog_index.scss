@@ -122,11 +122,16 @@
 }
 
 .fa-heart {
-  color: #FFACE4;
+  color: #d750aa;
 }
 
 .fa-remove {
-  color: #CDD6DD;
+  color: #040a10;
+}
+
+.fa-times:before {
+  content: "\f00d";
+  color: black;
 }
 
 .redo {
@@ -150,5 +155,21 @@
     color: black;
     transform: translate(5px, 5px);
     box-shadow: none;
+  }
+}
+
+.name{
+  h2{
+    pointer-events: none;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.interets{
+  h4{
+    font-size: 25px, black;
+    font-weight: bolder;
+    pointer-events: none;
   }
 }

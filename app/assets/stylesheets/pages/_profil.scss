@@ -13,15 +13,15 @@
   }
 }
 
-.dog-create{
+#dog-create{
   border: 1px, solid, black;
   border-radius: 25px;
-  background-color: blue;
   width: 180px;
-  height: 130px;
+  height: 80px;
   text-align: center;
   justify-content: center;
   margin: auto;
+  padding-bottom: 5vh;
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
   font-size: 11px;
@@ -38,5 +38,11 @@
     a{
       text-align: center;
       display: flex;
+      font-size: 18px;
     }
+}
+
+.tap{
+  display:  flex;
+  position: absolute, bottom end, sticky;
 }

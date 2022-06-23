@@ -1,6 +1,11 @@
 
 <div class="tap">
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
+      <%= link_to :back do %>
+      <div class="tapbar-chat ">
+        <h2><i class="fas fa-arrow-left"></i></h2>
+      </div>
+    <% end %>
     <%= link_to profil_path(current_user) do %>
       <div class="tapbar-account ">
         <h2><i class="fas fa-user-circle"></i></h2>

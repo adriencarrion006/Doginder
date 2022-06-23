@@ -38,7 +38,10 @@ user19 = User.create!(email:"m@gmail.com", password:"lechien", pseudo: "Sebeau",
 
 
 
+
 dogs = Dog.create!(user_id: user1.id, name: "rex", breed:"berger allemand", centre_interet:"nager", fontawesome:"fas fa-swimmer", description:"il fouille partout",location_cp:"06400")
+
+
 photo1 = URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735608/rex3_ghqkuw.jpg")
 dogs.photos.attach(io: photo1, filename: "rex3.jpg", content_type: "image/jpg")
 dogs.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655735601/rex2_ary3pg.jpg"), filename: "rex2.jpg", content_type: "image/jpg")
@@ -89,7 +92,9 @@ dogs8.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upl
 dogs8.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817493/ewelina-1_r7xh5b.jpg"), filename: "ewelina-2.jpg", content_type: "image/jpg")
 dogs8.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817493/ewelina-2_dh2dhd.jpg"), filename: "ewelina-3.jpg", content_type: "image/jpg")
 
+
 dogs9 = Dog.create!(user_id: user2.id, name: "Harlem", breed:"loup", centre_interet:"Canicross", fontawesome:"fas fa-running", description:"Harlem se montre très proche de l'humain, câlin, en demande d'attention et hyper attendrissant.",location_cp:"06300")
+
 dogs9.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817585/harlem-3_qm2myd.jpg"), filename: "harlem-1.jpg", content_type: "image/jpg")
 dogs9.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817585/harlem-2_omfpjg.jpg"), filename: "harlem-2.jpg", content_type: "image/jpg")
 dogs9.photos.attach(io: URI.open("https://res.cloudinary.com/dcluutgvi/image/upload/v1655817585/harlem-1_lkevkd.jpg"), filename: "harlem-3.jpg", content_type: "image/jpg")
