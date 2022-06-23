@@ -17,22 +17,22 @@
 }
 
 .bouton{
-  width: 140px;
+  width: 150px;
   height: 45px;
   font-family: 'Roboto', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: bolder;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2.5px;
-  font-weight: 500;
   background-color: #3397e1;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px #1773ea;
+  // box-shadow: 0px 8px 15px #1773ea;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
   a{
-
     text-decoration: none;
   }
 }

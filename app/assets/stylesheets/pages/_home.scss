@@ -41,7 +41,7 @@ html, body {
   margin-top: 6vh;
   font-weight: bolder;
   color: white;
-    width: 140px;
+    width: 150px;
     height: 45px;
     font-family: 'Roboto', sans-serif;
     font-size: 11px;
@@ -68,4 +68,8 @@ input{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.tapbar-chat .bouton{
+text-align: center;
 }

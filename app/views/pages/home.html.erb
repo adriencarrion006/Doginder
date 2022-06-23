@@ -5,23 +5,26 @@
   <div class="slogan">
     <h2>Pour jouer à la baballe à plusieurs!</h2>
   </div>
+  <br>
   <div id="core-search">
     <%= form_tag dogs_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: " code postal"
+      placeholder: "Mon code postal"
     %>
-    <%= select :queryinterest,
+
+    <br>
+  <%= select :queryinterest,
       params[:queryinterest],
-      ["manger", "Nager", "Voler des chaussettes", "Courir en montagne", "Faire la sieste", "Creuser des trous",
-      "Chasser les chats", "Ronger mon nonos", "Jouer à la baballe", "Canicross", "Agility", "Suivre une piste","Attraper les méchants",
-      "Mordre le facteur", "Jouer au freesbee"],include_blank: "ce que j'aime faire"
+      ["Canicross", "Manger miam miam", "Parcours d'agilité", "Courir en montagne", "Nager", "Chasser les chats", "Ronger mon nonos", "Jouer à la babille", "Faire la sieste", "Poursuivre le facteur"], include_blank: "Mon loisir favori"
     %>
-      <%= submit_tag "Recherche", class: "tapbar-chat bouton" %>
+    <br>
+    <br>
+      <%= submit_tag "Rechercher", class: "tapbar-chat bouton" %>
       <% end %>
     <div id="core_dog">
-      <%= link_to "Voir tous les compagnons", dogs_path, class: "tapbar-chat bouton"%>
+      <%= link_to " Voir tous les compagnons", dogs_path, class: "tapbar-chat bouton"%>
     </div>
   </div>
 </div>
