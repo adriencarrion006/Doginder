@@ -5,7 +5,7 @@
     <div class = "infos-dog">
     <% if @user.id == current_user.id %>
       <div id="avatar-user">
-        <%= image_tag @user.image_avatar, size:"300x400"%>
+        <%= image_tag @user.image_avatar, size:"250x300"%>
         <% @user.dogs.each do |dog| %>
 
         <%= link_to dog_path(dog.id) do %>
@@ -22,6 +22,7 @@
         <div class = "description">
         <br>
         <p><i class="fas fa-portrait"></i>&nbsp;&nbsp;<%= @user.description  %></p>
+        <br>
         <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;<%= @user.email %></p>
         <p><i class="fas fa-user-alt"></i>&nbsp;&nbsp;<%= @user.first_name %> <%= @user.last_name.capitalize %></p>
       </div>
