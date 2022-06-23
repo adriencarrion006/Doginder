@@ -1,4 +1,3 @@
-
 <div class="card-general">
   <div class="head">
     <h1><%= @user.pseudo %></h1>
@@ -6,40 +5,39 @@
     <div class = "infos-dog">
     <% if @user.id == current_user.id %>
       <div id="avatar-user">
-        <%= image_tag @user.image_avatar, size:"150x150" %>
+        <%= image_tag @user.image_avatar, size:"300x400"%>
         <% @user.dogs.each do |dog| %>
+
         <%= link_to dog_path(dog.id) do %>
-        <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <div class="dogavatar">
+        <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
+        </div>
         <% end %>
         <% end %>
       </div>
         <div class = "description">
-        <p><strong> Ma description: </strong></p>
-        <p><%= @user.description  %></p>
-        <p><strong> Mon Email: </strong></p>
-        <p><%= @user.email %></p>
-        <p><strong> Mon pseudo: </strong></p>
-        <p><%= @user.pseudo %></p>
-        <p><strong> Mon prenom: </strong></p>
-        <p><%= @user.first_name %></p>
-        <p><strong> Mon nom:</strong></p>
-        <p><%= @user.last_name %></p>
+        <br>
+        <p><i class="fas fa-portrait"></i>&nbsp;&nbsp;<%= @user.description  %></p>
+        <p><i class="fas fa-envelope"></i>&nbsp;&nbsp;<%= @user.email %></p>
+        <p><i class="fas fa-user-alt"></i>&nbsp;&nbsp;<%= @user.first_name %> <%= @user.last_name.capitalize %></p>
       </div>
         <div id="dog-create">
           <%= link_to "Ajouter un chien", new_dog_path%>
         </div>
         <% else %>
           <div id="avatar-user">
-            <%= image_tag @user.image_avatar, size:"150x150" %>
+            <%= image_tag @user.image_avatar, size:"300x300" %>
             <% @user.dogs.each do |dog| %>
-          <%= cl_image_tag dog.photos.first.key, height: 100, width: 120, crop: :fill %>
+        <%= link_to dog_path(dog.id) do %>
+        <div class="dogavatar">
+        <%= cl_image_tag dog.photos.first.key, height: 100, width: 100, crop: :fill %>
+        </div>
+        <% end %>
         <% end %>
           </div>
-                <div class = "description">
-        <p><strong> Pseudo: </strong></p>
-        <p><%= @user.pseudo %></p>
-        <p><strong> Description: </strong></p>
-        <p><%= @user.description  %></p>
+          <br>
+          <div class = "description">
+        <p><i class="fas fa-portrait"></i>&nbsp;&nbsp;<%= @user.description  %></p>
       </div>
         <% end %>
     </div>
