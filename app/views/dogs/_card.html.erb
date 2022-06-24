@@ -7,7 +7,8 @@
   <%= image_tag "dog.jpg", height: 300, width: 400, crop: :fill %>
   <% end %>
     <div class="name">
-      <%= link_to dog_path(dog) do %>
+      <%= link_to dog_path(dog, query: params[:query], queryinterest: params[:queryinterest]) do %>
+
         <h2><%= dog.name %></h2>
       <% end %>
 

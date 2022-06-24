@@ -12,7 +12,7 @@
       </div>
     <% end %>
   <% end %>
-    <%= link_to dogs_path do %>
+    <%= link_to dogs_path(query: params[:query], queryinterest: params[:queryinterest]) do %>
       <div class="tapbar-chat ">
         <h2><i class="fas fa-paw"></i></h2>
       </div>
