@@ -18,22 +18,29 @@ img {
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 }
-#avatar-user{
-  position: relative;
-  img{
-    // border-radius: 25px;
-    display: inline-block;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-left: 3vh;
-    margin-top: 10vh;
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 30vh;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
+}
+
+#avatar-user{
+  width: 80%;
+  position: relative;
 }
 .dogavatar{
 
   position: absolute;
-  bottom: -40px;
-  right: +40px;
+  bottom: -32px;
+  right: -10px;
 border-radius: 50%;
 // overflow: hidden;
 // height: 100px;
@@ -76,4 +83,10 @@ border-radius: 50%;
 .tap{
   display:  flex;
   position: absolute, bottom end, sticky;
+}
+
+.card-general {
+  .head {
+    height: auto;
+  }
 }

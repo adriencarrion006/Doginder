@@ -5,6 +5,7 @@
 
     <div class = "infos-dog">
     <% if @user.id == current_user.id %>
+      <div class="avatar-container">
       <div id="avatar-user">
         <%= image_tag @user.image_avatar, size:"250x300"%>
         <% @user.dogs.each do |dog| %>
@@ -16,6 +17,7 @@
         <% else %>
       <%= image_tag "dog.jpg", height: 100, width: 100, crop: :fill %>
       <% end %>
+      </div>
          </div>
         <% end %>
         <% end %>
@@ -31,8 +33,9 @@
           <%= link_to "Ajouter un chien", new_dog_path%>
         </div>
         <% else %>
+      <div class="avatar-container">
           <div id="avatar-user">
-            <%= image_tag @user.image_avatar, size:"300x300" %>
+            <%= image_tag @user.image_avatar %>
             <% @user.dogs.each do |dog| %>
         <%= link_to dog_path(dog.id, query: params[:query], queryinterest: params[:queryinterest]) do %>
         <div class="dogavatar">
@@ -44,6 +47,7 @@
         </div>
         <% end %>
         <% end %>
+          </div>
           </div>
           <br>
           <div class = "description">
