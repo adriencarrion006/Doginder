@@ -23,7 +23,7 @@
       </div>
     <div class="dogshow-useravatar">
       <% if user_signed_in? %>
-      <%= link_to profil_path(@dog.user) do  %>
+      <%= link_to profil_path(@dog.user, query: params[:query], queryinterest: params[:queryinterest]) do  %>
         <%= image_tag @dog.user.image_avatar, size:"100x100",class:"img-radius"  %>
         <% end %>
       <% end %>
